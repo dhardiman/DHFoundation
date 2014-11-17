@@ -65,6 +65,11 @@
 		076321E4179410D900846D0D /* libDHFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 076321C717940CD000846D0D /* libDHFoundation.a */; };
 		07800DBD17AFDC8B00E6020B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B8516C17A25B0A0057D482 /* SystemConfiguration.framework */; };
 		07C9CC3817B0F78E00802E74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC3717B0F78E00802E74 /* Images.xcassets */; };
+		45DE095F1A1A574C008EC57A /* DHConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DE095E1A1A574C008EC57A /* DHConfigurationTests.m */; };
+		45DE09621A1A5771008EC57A /* DHConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 45DE09601A1A5771008EC57A /* DHConfiguration.h */; };
+		45DE09631A1A5771008EC57A /* DHConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DE09611A1A5771008EC57A /* DHConfiguration.m */; };
+		45DE09661A1A57F1008EC57A /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09641A1A57F1008EC57A /* Config.plist */; };
+		45DE09671A1A57F1008EC57A /* TestConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09651A1A57F1008EC57A /* TestConfig.plist */; };
 		96B8516A17A25A470057D482 /* DHReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B8516817A25A470057D482 /* DHReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96B8516B17A25A470057D482 /* DHReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B8516917A25A470057D482 /* DHReachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		96B8516D17A25B0A0057D482 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B8516C17A25B0A0057D482 /* SystemConfiguration.framework */; };
@@ -144,6 +149,11 @@
 		076321DB17940D4E00846D0D /* DHFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DHFoundation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		076321E217940E0B00846D0D /* DHNotificationsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DHNotificationsTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		07C9CC3717B0F78E00802E74 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		45DE095E1A1A574C008EC57A /* DHConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHConfigurationTests.m; sourceTree = "<group>"; };
+		45DE09601A1A5771008EC57A /* DHConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHConfiguration.h; sourceTree = "<group>"; };
+		45DE09611A1A5771008EC57A /* DHConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHConfiguration.m; sourceTree = "<group>"; };
+		45DE09641A1A57F1008EC57A /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		45DE09651A1A57F1008EC57A /* TestConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestConfig.plist; sourceTree = "<group>"; };
 		96B8516817A25A470057D482 /* DHReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DHReachability.h; path = Reachability/DHReachability.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		96B8516917A25A470057D482 /* DHReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DHReachability.m; path = Reachability/DHReachability.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		96B8516C17A25B0A0057D482 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -272,6 +282,8 @@
 		0763217C179409CA00846D0D /* DHFoundationTestBase */ = {
 			isa = PBXGroup;
 			children = (
+				45DE09641A1A57F1008EC57A /* Config.plist */,
+				45DE09651A1A57F1008EC57A /* TestConfig.plist */,
 				076321B717940A1900846D0D /* Application */,
 				076321B917940C4000846D0D /* View Controllers */,
 				07C9CC3717B0F78E00802E74 /* Images.xcassets */,
@@ -302,6 +314,7 @@
 				076321A7179409CA00846D0D /* Supporting Files */,
 				076321E217940E0B00846D0D /* DHNotificationsTest.m */,
 				0731648B17967ECC00930FCE /* DHDateFormatterTests.m */,
+				45DE095E1A1A574C008EC57A /* DHConfigurationTests.m */,
 			);
 			path = DHFoundationTests;
 			sourceTree = "<group>";
@@ -347,6 +360,7 @@
 		076321C917940CD000846D0D /* DHFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				45DE09591A1A566D008EC57A /* Configuration */,
 				96B8516717A25A040057D482 /* Reachability */,
 				0731648D179681B900930FCE /* Cache */,
 				0731646917955B8900930FCE /* Date */,
@@ -379,6 +393,15 @@
 			path = Notifications;
 			sourceTree = "<group>";
 		};
+		45DE09591A1A566D008EC57A /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				45DE09601A1A5771008EC57A /* DHConfiguration.h */,
+				45DE09611A1A5771008EC57A /* DHConfiguration.m */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
 		96B8516717A25A040057D482 /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +428,7 @@
 				0731646517955A0900930FCE /* NSData+JSONDeserialise.h in Headers */,
 				0731646717955A0900930FCE /* NSObject+JSONSerialise.h in Headers */,
 				0731646C17955B9500930FCE /* NSDate+Rails.h in Headers */,
+				45DE09621A1A5771008EC57A /* DHConfiguration.h in Headers */,
 				0731648917967EB200930FCE /* NSDateFormatter+Formatters.h in Headers */,
 				07316494179681DA00930FCE /* NSCache+Subscripting.h in Headers */,
 				96B8516A17A25A470057D482 /* DHReachability.h in Headers */,
@@ -450,7 +474,7 @@
 			name = DHFoundationTests;
 			productName = DHFoundationTests;
 			productReference = 0763219F179409CA00846D0D /* DHFoundationTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		076321C617940CD000846D0D /* DHFoundation */ = {
 			isa = PBXNativeTarget;
@@ -508,8 +532,10 @@
 				07632189179409CA00846D0D /* Default.png in Resources */,
 				07C9CC3817B0F78E00802E74 /* Images.xcassets in Resources */,
 				0763218B179409CA00846D0D /* Default@2x.png in Resources */,
+				45DE09661A1A57F1008EC57A /* Config.plist in Resources */,
 				0763218D179409CA00846D0D /* Default-568h@2x.png in Resources */,
 				07632196179409CA00846D0D /* DHMasterViewController.xib in Resources */,
+				45DE09671A1A57F1008EC57A /* TestConfig.plist in Resources */,
 				07632199179409CA00846D0D /* DHDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45DE095F1A1A574C008EC57A /* DHConfigurationTests.m in Sources */,
 				076321E317940E0B00846D0D /* DHNotificationsTest.m in Sources */,
 				0731648C17967ECC00930FCE /* DHDateFormatterTests.m in Sources */,
 			);
@@ -586,6 +613,7 @@
 				0731646817955A0900930FCE /* NSObject+JSONSerialise.m in Sources */,
 				0731646D17955B9500930FCE /* NSDate+Rails.m in Sources */,
 				0731648A17967EB200930FCE /* NSDateFormatter+Formatters.m in Sources */,
+				45DE09631A1A5771008EC57A /* DHConfiguration.m in Sources */,
 				07316495179681DA00930FCE /* NSCache+Subscripting.m in Sources */,
 				96B8516B17A25A470057D482 /* DHReachability.m in Sources */,
 				96B8517117A260300057D482 /* DHReachabilityEventHandler.m in Sources */,

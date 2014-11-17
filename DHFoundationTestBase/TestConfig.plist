@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>testString</key>
+	<string>A test string</string>
+	<key>testNumber</key>
+	<integer>3</integer>
+	<key>testURL</key>
+	<string>http://www.google.com/</string>
+	<key>testBOOL</key>
+	<true/>
+	<key>testFloat</key>
+	<real>3.14</real>
+	<key>testInt</key>
+	<integer>3</integer>
+	<key>DHTestPrefix</key>
+	<string>Prefix string</string>
+</dict>
+</plist>
