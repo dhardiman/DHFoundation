@@ -117,15 +117,20 @@
     [self.notifications[name] removeAllObjects];
 }
 
+- (void)removeAllObservers {
+    NSArray *allObservers = [self.notifications.allValues valueForKeyPath:@"@unionOfArrays.self"];
+    for (id observer in allObservers) {
+        [[NSNotificationCenter defaultCenter] removeObserver:observer];
+    }
+    [self.notifications removeAllObjects];
+}
+
 - (id)objectForKeyedSubscript:(id)aKey {
     return self.notifications[aKey];
 }
 
 - (void)dealloc {
-    NSArray *allObservers = [self.notifications.allValues valueForKeyPath:@"@unionOfArrays.self"];
-    for (id observer in allObservers) {
-        [[NSNotificationCenter defaultCenter] removeObserver:observer];
-    }
+    [self removeAllObservers];
 }
 
 @end

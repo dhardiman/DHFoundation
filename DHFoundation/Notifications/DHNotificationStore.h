@@ -130,4 +130,9 @@ typedef void(^DHNotificationStoreBlock)(NSNotification *note);
  */
 - (void)removeObserversForName:(NSString *)name;
 
+/**
+ Removes all observers from NotificationCenter & the object store
+ */
+- (void)removeAllObservers;
+
 @end
