@@ -66,7 +66,7 @@
 		07800DBD17AFDC8B00E6020B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B8516C17A25B0A0057D482 /* SystemConfiguration.framework */; };
 		07C9CC3817B0F78E00802E74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC3717B0F78E00802E74 /* Images.xcassets */; };
 		45DE095F1A1A574C008EC57A /* DHConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DE095E1A1A574C008EC57A /* DHConfigurationTests.m */; };
-		45DE09621A1A5771008EC57A /* DHConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 45DE09601A1A5771008EC57A /* DHConfiguration.h */; };
+		45DE09621A1A5771008EC57A /* DHConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 45DE09601A1A5771008EC57A /* DHConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45DE09631A1A5771008EC57A /* DHConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DE09611A1A5771008EC57A /* DHConfiguration.m */; };
 		45DE09661A1A57F1008EC57A /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09641A1A57F1008EC57A /* Config.plist */; };
 		45DE09671A1A57F1008EC57A /* TestConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09651A1A57F1008EC57A /* TestConfig.plist */; };
