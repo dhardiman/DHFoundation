@@ -5,6 +5,8 @@
 //  Copyright (c) 2013 David Hardiman. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+#import <SystemConfiguration/SystemConfiguration.h>
 #import "DHWeakSelf.h"
 #import "NSData+JSONDeserialise.h"
 #import "NSObject+JSONSerialise.h"
@@ -14,3 +16,4 @@
 #import "NSDateFormatter+Formatters.h"
 #import "NSCache+Subscripting.h"
 #import "DHReachabilityEventHandler.h"
+#import "DHConfiguration.h"
