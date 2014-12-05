@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="DHFoundation : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>DHFoundation</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/dhardiman/DHFoundation">View on GitHub</a>
+
+          <h1 id="project_title">DHFoundation</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/dhardiman/DHFoundation/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/dhardiman/DHFoundation/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="dhfoundation" class="anchor" href="#dhfoundation" aria-hidden="true"><span class="octicon octicon-link"></span></a>DHFoundation</h1>
+
+<p>Common repository of useful iOS code. Full documentation can be found <a href="documentation/">here</a> or downloaded as an Xcode docset <a href="documentation/DHFoundation.docset.zip">here</a>.</p>
+
+<h2>
+<a id="dhnotificationstore" class="anchor" href="#dhnotificationstore" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>DHNotificationStore</code>
+</h2>
+
+<p>This is a mechanism to make dealing with <code>NSNotificationCenter</code>'s block based methods simpler.</p>
+
+<p>Instead of</p>
+
+<pre><code>// We need to hang on to this observer object to remove later
+id observer = [[NSNotificationCenter defaultCenter] addObserverForName:DHNotificationName
+                                                                object:nil
+                                                                 queue:[NSOperationQueue currentQueue]
+                                                            usingBlock:^(NSNotification *note) {
+                                                                // Handle notification
+                                                            }];
+[[NSNotificationCenter defaultCenter] removeObserver:observer];
+</code></pre>
+
+<p><code>DHNotificationStore</code> wraps this, and using associated objects and weak references, allows the object lifecycle to handle removing the notification observer, leaving us with</p>
+
+<pre><code>[self.dh_notificationStore addObserverForName:DHNotificationName usingBlock:^(NSNotification *note) {
+    // Handle notification
+}];
+</code></pre>
+
+<h2>
+<a id="dhconfiguration" class="anchor" href="#dhconfiguration" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>DHConfiguration</code>
+</h2>
+
+<p>I wish I could remember the blog post where I discovered this idea so I could credit it. If it was your idea, please let me know so I can.</p>
+
+<p><code>DHConfiguration</code> is a class for wrapping access to a plist configuration file. It uses the objective-c runtime to add accessor methods at runtime to read the class. Simply subclass <code>DHConfiguration</code>, add your own properties to your subclass of the correct type, and declare them as <code>@dynamic</code> in the implementation. Out of the box, this supports integers, floats, bools, any type natively supported by the plist format, as well as converting a string value to <code>NSURL</code>. It is trivial to extend to support further type conversion from string inputs in future.</p>
+
+<h2>
+<a id="dhreachabilityeventhandler" class="anchor" href="#dhreachabilityeventhandler" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>DHReachabilityEventHandler</code>
+</h2>
+
+<p>This is a simple way to handle reachability changes within a class. Via a category on <code>NSObject</code>, each class is given a <code>dh_reachability</code> class that exposes both a <code>DHReachability</code> object, which is simply Apple's <code>Reachability</code> class but namespaced, as well as a <code>changed</code> event handler block that will be fired whenever the reachability status changes.</p>
+
+<h2>
+<a id="categories" class="anchor" href="#categories" aria-hidden="true"><span class="octicon octicon-link"></span></a>Categories</h2>
+
+<p>There are various useful categories in this library, see the documentation for more info.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">DHFoundation maintained by <a href="https://github.com/dhardiman">dhardiman</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
