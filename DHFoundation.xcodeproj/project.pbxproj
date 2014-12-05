@@ -608,7 +608,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"David Hardiman\";\ncompanyID=\"me.davidhardiman\";\ncompanyURL=\"http://davidhardiman.me\";\ntarget=\"iphoneos\";\n#target=\"macosx\";\noutputPath=\"${PROJECT_DIR}/documentation\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"DHFoundation\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--docset-atom-filename \"${company}.atom\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"${companyURL}/${company}\" \\\n--output \"${outputPath}\" \\\n--publish-docset \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--ignore \"*.m\" \\\n--exit-threshold 2 \\\n\"${PROJECT_DIR}/DHFoundation\"";
+			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"David Hardiman\";\ncompanyID=\"me.davidhardiman\";\ncompanyURL=\"http://davidhardiman.me\";\ntarget=\"iphoneos\";\n#target=\"macosx\";\noutputPath=\"${PROJECT_DIR}/documentation\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"DHFoundation\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--docset-atom-filename \"${company}.atom\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"${companyURL}/${company}\" \\\n--output \"${outputPath}\" \\\n--publish-docset \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--ignore \"*.m\" \\\n--exit-threshold 2 \\\n--index-desc \"${PROJECT_DIR}/README.md\" \\\n\"${PROJECT_DIR}/DHFoundation\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -953,6 +953,7 @@
 				450A4B781A31B293001D9577 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
