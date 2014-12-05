@@ -5,7 +5,7 @@
 //  Created by David Hardiman on 19/08/2012.
 //
 
-/*
+/**
  From https://gist.github.com/3391903
  */
 @interface NSObject (Cast)
@@ -16,6 +16,7 @@
  the correct type and returns nil
  if not.
  @usage [DHTestClass cast:myObject]
+ @param from The object to cast
  */
 + (instancetype)cast:(id)from;
 

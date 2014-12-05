@@ -6,6 +6,10 @@
 //  Copyright (c) 2012 David Hardiman. All rights reserved.
 //
 
+/**
+ *  Convenience category to wrap `NSJSONSerialization` to serialise an
+ *  object to json
+ */
 @interface NSObject (JSONSerialise)
 
 /**

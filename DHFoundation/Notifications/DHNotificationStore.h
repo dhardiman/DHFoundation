@@ -27,12 +27,19 @@
  THE SOFTWARE.
  */
 
-
 #import <Foundation/Foundation.h>
 
-typedef void(^DHNotificationStoreBlock)(NSNotification *note);
+/**
+ *  A block that will be executed when a notification is received
+ *
+ *  @param note The notification object posted
+ */
+typedef void (^DHNotificationStoreBlock)(NSNotification *note);
 
 /**
+ An object for making `NSNotificationCenter`'s block APIs a little easier
+ to deal with by automatically handling the observer objects returned.
+ 
  NOTE: There is no need to store and remove the notification objects 
  externally. this is handled for you automatically in this class. 
  Return values should be used for removeObserver: purposes only
@@ -40,7 +47,6 @@ typedef void(^DHNotificationStoreBlock)(NSNotification *note);
  gets deallocated.
  */
 @interface DHNotificationStore : NSObject
-
 
 /**
  Add a notification with specified name, on the posting queue with
@@ -112,8 +118,9 @@ typedef void(^DHNotificationStoreBlock)(NSNotification *note);
 - (NSArray *)addObserversForNames:(NSArray *)names object:(id)obj queue:(NSOperationQueue *)queue usingBlock:(DHNotificationStoreBlock)block;
 
 /**
- Allow access to the underlying notification dictionary.
- @return array of notification objects for given key name.
+ Allow access to the underlying notification observer dictionary.
+ @param aKey The notification name being requested
+ @return array of notification observer objects for given key name.
  */
 - (id)objectForKeyedSubscript:(id)aKey;
 

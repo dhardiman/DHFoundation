@@ -8,8 +8,16 @@
 #import <Foundation/Foundation.h>
 #import "DHReachability.h"
 
-typedef void(^DHReachabilityChanged)(DHReachabilityStatus status);
+/**
+ *  Block executed when reachability status changes
+ *
+ *  @param status The new status
+ */
+typedef void (^DHReachabilityChanged)(DHReachabilityStatus status);
 
+/**
+ *  Object used to be alerted for reachability status changes
+ */
 @interface DHReachabilityEventHandler : NSObject
 
 /**
@@ -17,11 +25,16 @@ typedef void(^DHReachabilityChanged)(DHReachabilityStatus status);
  */
 @property (nonatomic, copy) DHReachabilityChanged changed;
 
+/**
+ *  The reachability object being used
+ */
 @property (nonatomic, readonly, strong) DHReachability *reachability;
 
 @end
 
-
+/**
+ *  Convenience category to allow easy access to a reachability event handler
+ */
 @interface NSObject (Reachability)
 
 /**

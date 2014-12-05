@@ -44,7 +44,6 @@
  
  */
 
-
 /*
  
  Apple's Original License on Reachability v2.0
@@ -90,7 +89,6 @@
  
  */
 
-
 /*
  DDG extensions include:
  Each reachability object now has a copy of the key used to store it in a
@@ -111,76 +109,175 @@
 // Since NSAssert and NSCAssert are used in this code,
 // I recommend you set NS_BLOCK_ASSERTIONS=1 in the release versions of your projects.
 
+/**
+ *  Representation of current reachability status
+ */
 typedef NS_ENUM(NSUInteger, DHReachabilityStatus) {
+    /**
+     *  Not reachable
+     */
     DHReachabilityStatusNotReachable = 0,
+    /**
+     *  Reachable via WIFI
+     */
     DHReachabilityStatusWiFi,
+    /**
+     *  Reachable via WWAN
+     */
     DHReachabilityStatusWWAN
 };
-
 
 extern NSString *const DHInternetConnection;
 extern NSString *const DHLocalWiFiConnection;
 extern NSString *const DHReachabilityChangedNotification;
 
+/**
+ *  Object for determining current reachability
+ */
 @interface DHReachability : NSObject {
-	
-@private
-	NSString                *key_;
-	SCNetworkReachabilityRef reachabilityRef;
-    
+
+   @private
+    NSString *key_;
+    SCNetworkReachabilityRef reachabilityRef;
 }
 
+/**
+ *  Key to describe this object
+ */
 @property (copy) NSString *key; // Atomic because network operations are asynchronous.
 
-// Designated Initializer.
-- (DHReachability *) initWithReachabilityRef: (SCNetworkReachabilityRef) ref;
+/**
+ *  Designated Initializer.
+ *
+ *  @param ref Underlying reachability reference
+ *
+ *  @return Configured `DHReachability` object
+ */
+- (DHReachability *)initWithReachabilityRef:(SCNetworkReachabilityRef)ref;
 
-// Use to check the reachability of a particular host name.
-+ (DHReachability *) reachabilityWithHostName: (NSString*) hostName;
+/**
+ *  Reachability object to check the reachability of a particular host name.
+ *
+ *  @param hostName Host name to check
+ *
+ *  @return Configured `DHReachability` object
+ */
++ (DHReachability *)reachabilityWithHostName:(NSString *)hostName;
 
-// Use to check the reachability of a particular IP address.
-+ (DHReachability *) reachabilityWithAddress: (const struct sockaddr_in*) hostAddress;
+/**
+ *  Reachability object to check the reachability of a particular IP address.
+ *
+ *  @param hostAddress Host address to check
+ *
+ *  @return Configured `DHReachability` object
+ */
++ (DHReachability *)reachabilityWithAddress:(const struct sockaddr_in *)hostAddress;
 
-// Use to check whether the default route is available.
-// Should be used to, at minimum, establish network connectivity.
-+ (DHReachability *) reachabilityForInternetConnection;
+/**
+ *  Reachability object to check whether the default route is available.
+ *  Should be used to, at minimum, establish network connectivity.
+ *
+ *  @return Configured `DHReachability` object
+ */
++ (DHReachability *)reachabilityForInternetConnection;
 
-// Use to check whether a local wifi connection is available.
-+ (DHReachability *) reachabilityForLocalWiFi;
+/**
+ *  Reachability object to check whether a local wifi connection is available.
+ *
+ *  @return Configured `DHReachability` object
+ */
++ (DHReachability *)reachabilityForLocalWiFi;
 
 /**
  Check to see if we're offline
  */
 + (BOOL)offline;
 
-//Start listening for reachability notifications on the current run loop.
-- (BOOL) startNotifier;
-- (void)  stopNotifier;
+/**
+ *  Start listening for reachability notifications on the current run loop.
+ *
+ *  @return YES if listenting was successful
+ */
+- (BOOL)startNotifier;
 
-// Comparison routines to enable choosing actions in a notification.
-- (BOOL) isEqual: (DHReachability *) r;
+/**
+ *  Stop listening for reachability notifications
+ */
+- (void)stopNotifier;
 
-// These are the status tests.
-- (DHReachabilityStatus) currentReachabilityStatus;
+/**
+ *  Comparison routines to enable choosing actions in a notification.
+ *
+ *  @param r Other object to test
+ *
+ *  @return YES if equal
+ */
+- (BOOL)isEqual:(DHReachability *)r;
 
-// The main direct test of reachability.
-- (BOOL) isReachable;
+/**
+ *  Current reachability status
+ *
+ *  @return The current established status
+ */
+- (DHReachabilityStatus)currentReachabilityStatus;
 
-// WWAN may be available, but not active until a connection has been established.
-// WiFi may require a connection for VPN on Demand.
-- (BOOL) isConnectionRequired; // Identical DDG variant.
-- (BOOL)   connectionRequired; // Apple's routine.
+/**
+ *  The main direct test of reachability.
+ *
+ *  @return YES if reachable
+ */
+- (BOOL)isReachable;
 
-// Dynamic, on demand connection?
-- (BOOL) isConnectionOnDemand;
+/**
+ *  WWAN may be available, but not active until a connection has been established.
+ *  WiFi may require a connection for VPN on Demand.
+ *  Identical DDG variant.
+ *
+ *  @return YES if a connection is required
+ */
+- (BOOL)isConnectionRequired;
+/**
+ *  WWAN may be available, but not active until a connection has been established.
+ *  WiFi may require a connection for VPN on Demand.
+ *  Apple's routine
+ *
+ *  @return YES if a connection is required
+ */
+- (BOOL)connectionRequired;
 
-// Is user intervention required?
-- (BOOL) isInterventionRequired;
+/**
+ *  Dynamic, on demand connection?
+ *
+ *  @return YES if we can use an on demand connection
+ */
+- (BOOL)isConnectionOnDemand;
 
-// Routines for specific connection testing by your app.
-- (BOOL) isReachableViaWWAN;
-- (BOOL) isReachableViaWiFi;
+/**
+ *  Is user intervention required?
+ *
+ *  @return YES if user intervention is required
+ */
+- (BOOL)isInterventionRequired;
 
-- (SCNetworkReachabilityFlags) reachabilityFlags;
+/**
+ *  Is it reachable via WWAN
+ *
+ *  @return YES if reachable via WWAN
+ */
+- (BOOL)isReachableViaWWAN;
+
+/**
+ *  Is it reachable via WIFI
+ *
+ *  @return YES if reachable via WIFI
+ */
+- (BOOL)isReachableViaWiFi;
+
+/**
+ *  Underlying reachability flags
+ *
+ *  @return `SCNetworkReachabilityFlags` value for current status
+ */
+- (SCNetworkReachabilityFlags)reachabilityFlags;
 
 @end

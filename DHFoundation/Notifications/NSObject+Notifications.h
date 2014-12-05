@@ -30,6 +30,10 @@
 #import <Foundation/Foundation.h>
 #import "DHNotificationStore.h"
 
+/**
+ *  Convenience category to make it easy to use `NSNotificationCenter`'s
+ *  block methods
+ */
 @interface NSObject (Notifications)
 
 /**

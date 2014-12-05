@@ -6,6 +6,10 @@
 //  Copyright (c) 2012 David Hardiman. All rights reserved.
 //
 
+/**
+ *  Convenience category on `NSData` to wrap Apple's
+ *  `NSJSONSerialization` objects
+ */
 @interface NSData (JSONDeserialise)
 
 /**
@@ -22,6 +26,10 @@
 
 @end
 
+/**
+ *  Convenience category on `NSString` to wrap Apple's
+ *  `NSJSONSerialization` objects
+ */
 @interface NSString (JSONDeserialise)
 
 /**

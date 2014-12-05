@@ -13,11 +13,14 @@
 
 /**
  Return a value for the subscript key
+ @param key The key to look for
  */
 - (id)objectForKeyedSubscript:(id)key;
 
 /**
  Set a value for the subscript key
+ @param obj The object to store
+ @param key The key to store against
  */
 - (void)setObject:(id)obj forKeyedSubscript:(id)key;
 
