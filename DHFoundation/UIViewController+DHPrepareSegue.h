@@ -20,7 +20,7 @@
 
  @param segueIdentifier      The identifier of the segue
  @param destination          Destination view controller for the segue
- @param sourceViewController Source view controller for the segue
+ @param source               Source view controller for the segue
  @param sender               Sender object. Requires one part of the selector name to be called sender:
  */
 - (void)dh_prepareSegueWithIdentifier:(NSString *)segueIdentifier
