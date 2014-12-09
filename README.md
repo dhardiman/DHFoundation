@@ -10,12 +10,13 @@ Instead of
 
 ```
 // We need to hang on to this observer object to remove later
-id observer = [[NSNotificationCenter defaultCenter] addObserverForName:DHNotificationName
-                                                                object:nil
-                                                                 queue:[NSOperationQueue currentQueue]
-                                                            usingBlock:^(NSNotification *note) {
-                                                                // Handle notification
-                                                            }];
+id observer = 
+[[NSNotificationCenter defaultCenter] addObserverForName:DHNotificationName
+                                                  object:nil
+                                                   queue:[NSOperationQueue currentQueue]
+                                              usingBlock:^(NSNotification *note) {
+                                                  // Handle notification
+                                              }];
 [[NSNotificationCenter defaultCenter] removeObserver:observer];
 ```
 
@@ -34,6 +35,35 @@ I wish I could remember the blog post where I discovered this idea so I could cr
 
 ## `DHReachabilityEventHandler`
 This is a simple way to handle reachability changes within a class. Via a category on `NSObject`, each class is given a `dh_reachability` class that exposes both a `DHReachability` object, which is simply Apple's `Reachability` class but namespaced, as well as a `changed` event handler block that will be fired whenever the reachability status changes.
+
+## `UIViewController+DHPrepareForSegue`
+Category method to try to avoid endless `if/else` blocks in `prepareForSegue:sender:` methods. Simply call `dh_prepareSegueWithIdentifier:destinationViewController:sourceViewController:sender` within `prepareForSegue:sender:` and the method will try to call a method with the same name as the segue identifier. For example, if a segue within a view controller has the identifier `configureViewController:`, we can simply write 
+
+```
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [self dh_prepareSegueWithIdentifier:segue.identifier
+              destinationViewController:segue.destinationViewController
+                   sourceViewController:segue.sourceViewController
+                                 sender:sender];
+}
+
+- (void)configureViewController:(UIViewController *)viewController {
+    // Configure the destination view controller in this method.
+    // No need for if statements above.
+}
+```
+
+Depending on the number of colon-separated sections in the selector name, the method above can pass different arguments to your method. Zero colons will pass no arguments, one will pass the destination, two will pass destination and source, and three will also pass the sender. The sender can be passed with fewer colons if there is a section called sender. For example
+```
+- (void)configureViewController:(UIViewController *)destination source:(UIViewController *)source {
+}
+```
+will receive the destination and source view controllers, whereas
+```
+- (void)configureViewController:(UIViewController *)destination sender:(id)sender {
+}
+```
+will receive the destination and sender.
 
 ## Categories
 There are various useful categories in this library, see the documentation for more info.
