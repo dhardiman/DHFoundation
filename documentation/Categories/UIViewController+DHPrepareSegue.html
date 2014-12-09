@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>NSObject(JSONSerialise) Category Reference</title>
+		<title>UIViewController(DHPrepareSegue) Category Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">NSObject(JSONSerialise) Category Reference</h1>
+				<h1 class="hideInXcode">UIViewController(DHPrepareSegue) Category Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -43,9 +43,7 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/JSONData">&nbsp;&nbsp;&nbsp;&nbsp;- JSONData</option>
-	
-	<option value="//api/name/JSONString">&nbsp;&nbsp;&nbsp;&nbsp;- JSONString</option>
+	<option value="//api/name/dh_prepareSegueWithIdentifier:destinationViewController:sourceViewController:sender:">&nbsp;&nbsp;&nbsp;&nbsp;- dh_prepareSegueWithIdentifier:destinationViewController:sourceViewController:sender:</option>
 	
 	
 	
@@ -75,9 +73,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JSONData">JSONData</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JSONString">JSONString</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dh_prepareSegueWithIdentifier:destinationViewController:sourceViewController:sender:">dh_prepareSegueWithIdentifier:destinationViewController:sourceViewController:sender:</a></span></li>
 	
 </ul></li>
 
@@ -86,7 +82,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="NSObject(JSONSerialise) Category Reference" name="top"></a>
+				<a title="UIViewController(DHPrepareSegue) Category Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -95,7 +91,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">NSObject(JSONSerialise) Category Reference</h1>
+						<h1 class="title title-header">UIViewController(DHPrepareSegue) Category Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -103,7 +99,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">NSObject+JSONSerialise.h</td>
+	<td class="specification-value">UIViewController+DHPrepareSegue.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -113,8 +109,8 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Convenience category to wrap <code>NSJSONSerialization</code> to serialise an
-object to json</p>
+						<p>Wrapper around objc_msgSend to allow us to do a similar
+thing to performSelector: whilst avoid ARC warnings</p>
 					</div>
 					
 					
@@ -132,13 +128,7 @@ object to json</p>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/JSONString">&ndash;&nbsp;JSONString</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/JSONData">&ndash;&nbsp;JSONData</a></code>
+		<code><a href="#//api/name/dh_prepareSegueWithIdentifier:destinationViewController:sourceViewController:sender:">&ndash;&nbsp;dh_prepareSegueWithIdentifier:destinationViewController:sourceViewController:sender:</a></code>
 	</span>
 	
 	
@@ -160,21 +150,48 @@ object to json</p>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/JSONData" title="JSONData"></a>
-	<h3 class="subsubtitle method-title">JSONData</h3>
+	<a name="//api/name/dh_prepareSegueWithIdentifier:destinationViewController:sourceViewController:sender:" title="dh_prepareSegueWithIdentifier:destinationViewController:sourceViewController:sender:"></a>
+	<h3 class="subsubtitle method-title">dh_prepareSegueWithIdentifier:destinationViewController:sourceViewController:sender:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Serialise the object to the data representaiton
-of a JSON string</p>
+		<p>Takes a segue identifier and runs perform selector against it. If the identifier has no colons, no
+arguments are passed, if one, the destination view controller is passed, if two, then the destination
+and source view controller are passed. It is also possible to pass the sender if part of the selector
+name is called sender:</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (NSData *)JSONData</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)dh_prepareSegueWithIdentifier:(NSString *)<em>segueIdentifier</em> destinationViewController:(UIViewController *)<em>destination</em> sourceViewController:(UIViewController *)<em>source</em> sender:(id)<em>sender</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>segueIdentifier</em></dt>
+			<dd><p>The identifier of the segue</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>destination</em></dt>
+			<dd><p>Destination view controller for the segue</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>source</em></dt>
+			<dd><p>Source view controller for the segue</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sender</em></dt>
+			<dd><p>Sender object. Requires one part of the selector name to be called sender:</p></dd>
+		</dl>
+		
+	</div>
 	
 	
 	
@@ -190,43 +207,7 @@ of a JSON string</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSObject+JSONSerialise.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/JSONString" title="JSONString"></a>
-	<h3 class="subsubtitle method-title">JSONString</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Serialise the object to a JSON string</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSString *)JSONString</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSObject+JSONSerialise.h</code><br />
+		<code class="declared-in-ref">UIViewController+DHPrepareSegue.h</code><br />
 	</div>				
 	
 	
