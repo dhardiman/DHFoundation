@@ -76,6 +76,9 @@
 		076321E4179410D900846D0D /* libDHFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 076321C717940CD000846D0D /* libDHFoundation.a */; };
 		07800DBD17AFDC8B00E6020B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B8516C17A25B0A0057D482 /* SystemConfiguration.framework */; };
 		07C9CC3817B0F78E00802E74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC3717B0F78E00802E74 /* Images.xcassets */; };
+		450A4B961A36EC5D001D9577 /* DHPrepareForSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A4B951A36EC5D001D9577 /* DHPrepareForSegueTests.m */; };
+		450A4B991A36EC64001D9577 /* UIViewController+DHPrepareSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 450A4B971A36EC64001D9577 /* UIViewController+DHPrepareSegue.h */; };
+		450A4B9A1A36EC64001D9577 /* UIViewController+DHPrepareSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A4B981A36EC64001D9577 /* UIViewController+DHPrepareSegue.m */; };
 		45DE095F1A1A574C008EC57A /* DHConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DE095E1A1A574C008EC57A /* DHConfigurationTests.m */; };
 		45DE09621A1A5771008EC57A /* DHConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 45DE09601A1A5771008EC57A /* DHConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45DE09631A1A5771008EC57A /* DHConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DE09611A1A5771008EC57A /* DHConfiguration.m */; };
@@ -161,6 +164,9 @@
 		076321DB17940D4E00846D0D /* DHFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DHFoundation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		076321E217940E0B00846D0D /* DHNotificationsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DHNotificationsTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		07C9CC3717B0F78E00802E74 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		450A4B951A36EC5D001D9577 /* DHPrepareForSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPrepareForSegueTests.m; sourceTree = "<group>"; };
+		450A4B971A36EC64001D9577 /* UIViewController+DHPrepareSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DHPrepareSegue.h"; sourceTree = "<group>"; };
+		450A4B981A36EC64001D9577 /* UIViewController+DHPrepareSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DHPrepareSegue.m"; sourceTree = "<group>"; };
 		45DE095E1A1A574C008EC57A /* DHConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHConfigurationTests.m; sourceTree = "<group>"; };
 		45DE09601A1A5771008EC57A /* DHConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHConfiguration.h; sourceTree = "<group>"; };
 		45DE09611A1A5771008EC57A /* DHConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHConfiguration.m; sourceTree = "<group>"; };
@@ -328,6 +334,7 @@
 				076321E217940E0B00846D0D /* DHNotificationsTest.m */,
 				0731648B17967ECC00930FCE /* DHDateFormatterTests.m */,
 				45DE095E1A1A574C008EC57A /* DHConfigurationTests.m */,
+				450A4B951A36EC5D001D9577 /* DHPrepareForSegueTests.m */,
 			);
 			path = DHFoundationTests;
 			sourceTree = "<group>";
@@ -373,6 +380,7 @@
 		076321C917940CD000846D0D /* DHFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				450A4B8E1A36EABC001D9577 /* Perform Selector */,
 				45DE09591A1A566D008EC57A /* Configuration */,
 				96B8516717A25A040057D482 /* Reachability */,
 				0731648D179681B900930FCE /* Cache */,
@@ -404,6 +412,15 @@
 				076321D617940D0A00846D0D /* NSObject+Notifications.m */,
 			);
 			path = Notifications;
+			sourceTree = "<group>";
+		};
+		450A4B8E1A36EABC001D9577 /* Perform Selector */ = {
+			isa = PBXGroup;
+			children = (
+				450A4B971A36EC64001D9577 /* UIViewController+DHPrepareSegue.h */,
+				450A4B981A36EC64001D9577 /* UIViewController+DHPrepareSegue.m */,
+			);
+			name = "Perform Selector";
 			sourceTree = "<group>";
 		};
 		45DE09591A1A566D008EC57A /* Configuration */ = {
@@ -444,6 +461,7 @@
 				45DE09621A1A5771008EC57A /* DHConfiguration.h in Headers */,
 				0731648917967EB200930FCE /* NSDateFormatter+Formatters.h in Headers */,
 				07316494179681DA00930FCE /* NSCache+Subscripting.h in Headers */,
+				450A4B991A36EC64001D9577 /* UIViewController+DHPrepareSegue.h in Headers */,
 				96B8516A17A25A470057D482 /* DHReachability.h in Headers */,
 				96B8517017A260300057D482 /* DHReachabilityEventHandler.h in Headers */,
 			);
@@ -629,6 +647,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45DE095F1A1A574C008EC57A /* DHConfigurationTests.m in Sources */,
+				450A4B961A36EC5D001D9577 /* DHPrepareForSegueTests.m in Sources */,
 				076321E317940E0B00846D0D /* DHNotificationsTest.m in Sources */,
 				0731648C17967ECC00930FCE /* DHDateFormatterTests.m in Sources */,
 			);
@@ -642,6 +661,7 @@
 				076321DA17940D0A00846D0D /* NSObject+Notifications.m in Sources */,
 				0731645F179559CE00930FCE /* NSObject+Cast.m in Sources */,
 				0731646617955A0900930FCE /* NSData+JSONDeserialise.m in Sources */,
+				450A4B9A1A36EC64001D9577 /* UIViewController+DHPrepareSegue.m in Sources */,
 				0731646817955A0900930FCE /* NSObject+JSONSerialise.m in Sources */,
 				0731646D17955B9500930FCE /* NSDate+Rails.m in Sources */,
 				0731648A17967EB200930FCE /* NSDateFormatter+Formatters.m in Sources */,
