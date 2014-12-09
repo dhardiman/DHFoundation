@@ -79,7 +79,7 @@ id observer =
 <p>This is a simple way to handle reachability changes within a class. Via a category on <code>NSObject</code>, each class is given a <code>dh_reachability</code> class that exposes both a <code>DHReachability</code> object, which is simply Apple's <code>Reachability</code> class but namespaced, as well as a <code>changed</code> event handler block that will be fired whenever the reachability status changes.</p>
 
 <h2><a id="dhprepareforsegue" class="anchor" href="#dhprepareforsegue" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>UIViewController+DHPrepareForSegue</code></h2>
-<p>Category method to try to avoid endless <code>if/else</code> blocks in <code>prepareForSegue:sender:</code> methods. Simply call <code>dh_prepareSegueWithIdentifier:destinationViewController:sourceViewController:sende</code> within <code>prepareForSegue:sender:</code> and the method will try to call a method with the same name as the segue identifier. For example, if a segue within a view controller has the identifier <code>configureViewController:</code>, we can simply write</p> 
+<p>Category method to try to avoid endless <code>if/else</code> blocks in <code>prepareForSegue:sender:</code> methods. Simply call <code>dh_prepareSegueWithIdentifier:destinationViewController:sourceViewController:sende</code> within <code>prepareForSegue:sender:</code> and the method will try to call a method with the same name as the segue identifier. For example, if a segue within a view controller has the identifier <code>showDetailViewController:</code>, we can simply write</p> 
 
 <pre><code>
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -89,7 +89,7 @@ id observer =
                                  sender:sender];
 }
 
-- (void)configureViewController:(UIViewController *)viewController {
+- (void)showDetailViewController:(UIViewController *)viewController {
     // Configure the destination view controller in this method.
     // No need for if statements above.
 }
@@ -97,14 +97,14 @@ id observer =
 
 <p>Depending on the number of colon-separated sections in the selector name, the method above can pass different arguments to your method. Zero colons will pass no arguments, one will pass the destination, two will pass destination and source, and three will also pass the sender. The sender can be passed with fewer colons if there is a section called sender. For example</p>
 <pre><code>
-- (void)configureViewController:(UIViewController *)destination
-                         source:(UIViewController *)source {
+- (void)showDetailViewController:(UIViewController *)destination
+                          source:(UIViewController *)source {
 }
 </code></pre>
 will receive the destination and source view controllers, whereas
 <pre><code>
-- (void)configureViewController:(UIViewController *)destination
-                         sender:(id)sender {
+- (void)showDetailViewController:(UIViewController *)destination
+                          sender:(id)sender {
 }
 </code></pre>
 <p>will receive the destination and sender.</p>
