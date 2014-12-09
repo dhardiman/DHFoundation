@@ -4,6 +4,7 @@
 //  Created by David Hardiman on 11/04/2014.
 //  Copyright (c) 2014 David Hardiman. All rights reserved.
 //
+#import <MIQTestingFramework/MIQTestingFramework.h>
 #import "UIViewController+DHPrepareSegue.h"
 
 @interface DHTestViewController : UIViewController
@@ -104,14 +105,22 @@ END_TEST_CASE
 
 @implementation DHTestViewController
 
-- (void)testSegue {}
-- (void)testDestination:(UIViewController *)destination {}
-- (void)testDestination:(UIViewController *)destination source:(UIViewController *)source {}
-- (void)testDestination:(UIViewController *)destination source:(UIViewController *)source anyobject:(id)object {}
+- (void)testSegue {
+}
+- (void)testDestination:(UIViewController *)destination {
+}
+- (void)testDestination:(UIViewController *)destination source:(UIViewController *)source {
+}
+- (void)testDestination:(UIViewController *)destination source:(UIViewController *)source anyobject:(id)object {
+}
 
-- (void)testSender:(id)sender {}
-- (void)testDestination:(UIViewController *)destination sender:(id)sender {}
-- (void)testDestination:(UIViewController *)destination source:(UIViewController *)source sender:(id)sender {}
-- (void)testDestination:(UIViewController *)destination source:(UIViewController *)source sender:(id)sender anyobject:(id)object {}
+- (void)testSender:(id)sender {
+}
+- (void)testDestination:(UIViewController *)destination sender:(id)sender {
+}
+- (void)testDestination:(UIViewController *)destination source:(UIViewController *)source sender:(id)sender {
+}
+- (void)testDestination:(UIViewController *)destination source:(UIViewController *)source sender:(id)sender anyobject:(id)object {
+}
 
 @end
