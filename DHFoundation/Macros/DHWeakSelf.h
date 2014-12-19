@@ -9,7 +9,7 @@
 #ifndef DHFoundation_DHWeakSelf_h
 #define DHFoundation_DHWeakSelf_h
 
-#define DHWeakSelf __weak __typeof(self) weakSelf = self
-#define DHStrongSelf __strong __typeof(self) strongSelf = weakSelf
+#define DHWeak(x) __weak __typeof(x) _dontusemeim_weak_##x = x
+#define DHStrong(x) __strong __typeof(x) x = _dontusemeim_weak_##x
 
 #endif

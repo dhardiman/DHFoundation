@@ -30,14 +30,14 @@
 
 - (void)setChanged:(DHReachabilityChanged)reachabilityChanged {
     [self.dh_notificationStore removeObserversForName:DHReachabilityChangedNotification];
-    DHWeakSelf;
+    DHWeak(self);
     [self.dh_notificationStore addObserverForName:DHReachabilityChangedNotification usingBlock:^(NSNotification *note) {
-        reachabilityChanged([weakSelf.reachability currentReachabilityStatus]);
+        DHStrong(self);
+        reachabilityChanged([self.reachability currentReachabilityStatus]);
     }];
 }
 
 @end
-
 
 static void *DHReachabilityHandlerObject = &DHReachabilityHandlerObject;
 
@@ -45,12 +45,12 @@ static void *DHReachabilityHandlerObject = &DHReachabilityHandlerObject;
 
 - (DHReachabilityEventHandler *)dh_reachability {
     DHReachabilityEventHandler *handler = objc_getAssociatedObject(self, DHReachabilityHandlerObject);
-    
+
     if (handler == nil) {
         handler = [[DHReachabilityEventHandler alloc] init];
         objc_setAssociatedObject(self, DHReachabilityHandlerObject, handler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
-    
+
     return handler;
 }
 
