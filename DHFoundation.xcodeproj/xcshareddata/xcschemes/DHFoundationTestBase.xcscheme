@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0763219E179409CA00846D0D"
-               BuildableName = "DHFoundationTests.octest"
+               BuildableName = "DHFoundationTests.xctest"
                BlueprintName = "DHFoundationTests"
                ReferencedContainer = "container:DHFoundation.xcodeproj">
             </BuildableReference>

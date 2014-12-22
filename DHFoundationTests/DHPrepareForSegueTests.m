@@ -4,7 +4,7 @@
 //  Created by David Hardiman on 11/04/2014.
 //  Copyright (c) 2014 David Hardiman. All rights reserved.
 //
-#import <MIQTestingFramework/MIQTestingFramework.h>
+@import MIQTestingFramework;
 #import "UIViewController+DHPrepareSegue.h"
 
 @interface DHTestViewController : UIViewController
@@ -27,7 +27,7 @@ TEST_CASE(DHPerformSelectorForSegueTests) {
 - (void)setUp {
     [super setUp];
     _testViewController = [[DHTestViewController alloc] init];
-    _partialViewController = PartialMock(_testViewController);
+    _partialViewController = OCMPartialMock(_testViewController);
 }
 
 - (void)tearDown {
