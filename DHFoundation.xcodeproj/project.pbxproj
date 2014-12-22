@@ -77,7 +77,7 @@
 		07800DBD17AFDC8B00E6020B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B8516C17A25B0A0057D482 /* SystemConfiguration.framework */; };
 		07C9CC3817B0F78E00802E74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC3717B0F78E00802E74 /* Images.xcassets */; };
 		450A4B961A36EC5D001D9577 /* DHPrepareForSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A4B951A36EC5D001D9577 /* DHPrepareForSegueTests.m */; };
-		450A4B991A36EC64001D9577 /* UIViewController+DHPrepareSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 450A4B971A36EC64001D9577 /* UIViewController+DHPrepareSegue.h */; };
+		450A4B991A36EC64001D9577 /* UIViewController+DHPrepareSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 450A4B971A36EC64001D9577 /* UIViewController+DHPrepareSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		450A4B9A1A36EC64001D9577 /* UIViewController+DHPrepareSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A4B981A36EC64001D9577 /* UIViewController+DHPrepareSegue.m */; };
 		45DE095F1A1A574C008EC57A /* DHConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DE095E1A1A574C008EC57A /* DHConfigurationTests.m */; };
 		45DE09621A1A5771008EC57A /* DHConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 45DE09601A1A5771008EC57A /* DHConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
