@@ -86,7 +86,7 @@
 		45DE09671A1A57F1008EC57A /* TestConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09651A1A57F1008EC57A /* TestConfig.plist */; };
 		45DE09971A1B526D008EC57A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B8516C17A25B0A0057D482 /* SystemConfiguration.framework */; };
 		96B8516A17A25A470057D482 /* DHReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B8516817A25A470057D482 /* DHReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		96B8516B17A25A470057D482 /* DHReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B8516917A25A470057D482 /* DHReachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		96B8516B17A25A470057D482 /* DHReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B8516917A25A470057D482 /* DHReachability.m */; };
 		96B8516D17A25B0A0057D482 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B8516C17A25B0A0057D482 /* SystemConfiguration.framework */; };
 		96B8517017A260300057D482 /* DHReachabilityEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B8516E17A260300057D482 /* DHReachabilityEventHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96B8517117A260300057D482 /* DHReachabilityEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B8516F17A260300057D482 /* DHReachabilityEventHandler.m */; };
