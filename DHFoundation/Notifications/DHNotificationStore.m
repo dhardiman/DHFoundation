@@ -36,7 +36,7 @@
  the key set as the notification name, and the value as a mutable
  array of notification objects.
  */
-@property (atomic, strong) NSMutableDictionary *notifications;
+@property (atomic, strong) NSMutableDictionary *observers;
 
 @end
 
@@ -44,7 +44,7 @@
 
 - (id)init {
     if (self = [super init]) {
-        _notifications = [[NSMutableDictionary alloc] init];
+        _observers = [[NSMutableDictionary alloc] init];
     }
 
     return self;
@@ -74,7 +74,7 @@
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     id notification = [notificationCenter addObserverForName:name object:obj queue:queue usingBlock:block];
 
-    NSMutableArray *objects = self.notifications[name];
+    NSMutableArray *objects = self.observers[name];
 
     if (objects == nil) {
         objects = [[NSMutableArray alloc] init];
@@ -82,7 +82,7 @@
 
     [objects addObject:notification];
 
-    self.notifications[name] = objects;
+    self.observers[name] = objects;
 
     return notification;
 }
@@ -99,9 +99,9 @@
     @synchronized(self.observers) {
         [[NSNotificationCenter defaultCenter] removeObserver:observer];
 
-        for (NSString *observerName in self.notifications) {
-            if ([self.notifications[observerName] containsObject:observer]) {
-                [self.notifications[observerName] removeObject:observer];
+        for (NSString *observerName in self.observers) {
+            if ([self.observers[observerName] containsObject:observer]) {
+                [self.observers[observerName] removeObject:observer];
             }
         }
     }
@@ -109,30 +109,30 @@
 
 - (void)removeObserversForName:(NSString *)name {
     @synchronized(self.observers) {
-        if (![[self.notifications allKeys] containsObject:name]) {
+        if (![[self.observers allKeys] containsObject:name]) {
             return;
         }
 
-        [self.notifications[name] enumerateObjectsUsingBlock:^(id observer, NSUInteger idx, BOOL *stop) {
+        [self.observers[name] enumerateObjectsUsingBlock:^(id observer, NSUInteger idx, BOOL *stop) {
         [[NSNotificationCenter defaultCenter] removeObserver:observer];
         }];
 
-        [self.notifications[name] removeAllObjects];
+        [self.observers[name] removeAllObjects];
     }
 }
 
 - (void)removeAllObservers {
     @synchronized(self.observers) {
-        NSArray *allObservers = [self.notifications.allValues valueForKeyPath:@"@unionOfArrays.self"];
+        NSArray *allObservers = [self.observers.allValues valueForKeyPath:@"@unionOfArrays.self"];
         for (id observer in allObservers) {
             [[NSNotificationCenter defaultCenter] removeObserver:observer];
         }
-        [self.notifications removeAllObjects];
+        [self.observers removeAllObjects];
     }
 }
 
 - (id)objectForKeyedSubscript:(id)aKey {
-    return self.notifications[aKey];
+    return self.observers[aKey];
 }
 
 - (void)dealloc {
