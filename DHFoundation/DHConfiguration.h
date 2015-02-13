@@ -5,6 +5,7 @@
 //  Created by David Hardiman on 15/09/2013.
 //  Copyright (c) 2012 David Hardiman. All rights reserved.
 //
+#import <Foundation/Foundation.h>
 
 /**
  Base class for retrieving properties from a config file.

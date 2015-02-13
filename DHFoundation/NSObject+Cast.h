@@ -4,6 +4,7 @@
 //
 //  Created by David Hardiman on 19/08/2012.
 //
+#import <Foundation/Foundation.h>
 
 /**
  From https://gist.github.com/3391903

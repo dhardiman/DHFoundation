@@ -5,6 +5,7 @@
 //  Created by David Hardiman on 17/07/2013.
 //  Copyright (c) 2013 David Hardiman. All rights reserved.
 //
+#import <Foundation/Foundation.h>
 
 /**
  Useful custom date formatters

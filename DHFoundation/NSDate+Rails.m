@@ -6,18 +6,23 @@
 
 #import "NSDate+Rails.h"
 
-@implementation NSDate(Rails)
+@implementation NSDate (Rails)
 
 - (NSDateComponents *)gregorianCalendarComponents {
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *components = [gregorian components:(NSSecondCalendarUnit | NSMinuteCalendarUnit
-                                                          | NSHourCalendarUnit | NSDayCalendarUnit
-                                                          | NSWeekdayCalendarUnit | NSWeekdayOrdinalCalendarUnit
-                                                          | NSWeekCalendarUnit | NSMonthCalendarUnit
-                                                          | NSYearCalendarUnit | NSEraCalendarUnit) fromDate:self];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [gregorian components:NSCalendarUnitSecond |
+                                                         NSCalendarUnitMinute |
+                                                         NSCalendarUnitHour |
+                                                         NSCalendarUnitDay |
+                                                         NSCalendarUnitWeekday |
+                                                         NSCalendarUnitWeekdayOrdinal |
+                                                         NSCalendarUnitWeekOfYear |
+                                                         NSCalendarUnitMonth |
+                                                         NSCalendarUnitYear |
+                                                         NSCalendarUnitEra
+                                                fromDate:self];
     return components;
 }
-
 
 - (BOOL)isAfter:(NSDate *)other {
     if (other == nil) {
@@ -49,7 +54,7 @@
 }
 
 - (NSInteger)minutesAgo {
-    NSInteger timeInterval = [[NSNumber numberWithDouble:[[NSDate date] timeIntervalSinceDate:self]] integerValue];
+    NSInteger timeInterval = [@([[NSDate date] timeIntervalSinceDate:self]) integerValue];
 
     return timeInterval / 60;
 }

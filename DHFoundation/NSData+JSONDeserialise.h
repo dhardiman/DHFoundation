@@ -5,6 +5,7 @@
 //  Created by David Hardiman on 27/09/2012.
 //  Copyright (c) 2012 David Hardiman. All rights reserved.
 //
+#import <Foundation/Foundation.h>
 
 /**
  *  Convenience category on `NSData` to wrap Apple's
