@@ -5,6 +5,8 @@
 //  Created by Dave Hardiman on 22/12/2014.
 //
 //
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 //! Project version number for DHFoundation.
 FOUNDATION_EXPORT double DHFoundationVersionNumber;
