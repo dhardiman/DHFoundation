@@ -7,6 +7,7 @@
 //
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <SystemConfiguration/SystemConfiguration.h>
 
 //! Project version number for DHFoundation.
 FOUNDATION_EXPORT double DHFoundationVersionNumber;
@@ -14,8 +15,6 @@ FOUNDATION_EXPORT double DHFoundationVersionNumber;
 //! Project version string for DHFoundation.
 FOUNDATION_EXPORT const unsigned char DHFoundationVersionString[];
 
-#import <Foundation/Foundation.h>
-#import <SystemConfiguration/SystemConfiguration.h>
 #import "DHWeakSelf.h"
 #import "NSData+JSONDeserialise.h"
 #import "NSObject+JSONSerialise.h"
