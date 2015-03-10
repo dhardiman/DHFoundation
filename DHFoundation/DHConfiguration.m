@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSDictionary *configPlist;
 @end
 
-const char * dh_property_getTypeString(objc_property_t property);
+const char *dh_property_getTypeString(objc_property_t property);
 
 @implementation DHConfiguration
 
@@ -51,7 +51,7 @@ const char * dh_property_getTypeString(objc_property_t property);
 
 + (BOOL)resolveInstanceMethod:(SEL)sel {
     NSString *selString = NSStringFromSelector(sel);
-    
+
     if ([selString rangeOfString:@":"].location == NSNotFound) {
         objc_property_t property = class_getProperty(self, selString.UTF8String);
         if (!property && [selString hasPrefix:@"is"]) {
@@ -67,25 +67,27 @@ const char * dh_property_getTypeString(objc_property_t property);
         const char *value = dh_property_getTypeString(property);
         if (strcmp(value, "Tc") == 0 ||
             strcmp(value, "TB") == 0 /* 64Bit */) {
-            return class_addMethod(self, sel, (IMP)dh_boolGetter, @encode(BOOL(*)(DHConfiguration *, SEL)));
+            return class_addMethod(self, sel, (IMP)dh_boolGetter, @encode(BOOL (*)(DHConfiguration *, SEL)));
         }
-        if (strcmp(value, "Tf") == 0 ||
-            strcmp(value, "Td") == 0 /* 64Bit */) {
-            return class_addMethod(self, sel, (IMP)dh_floatGetter, @encode(CGFloat(*)(DHConfiguration *, SEL)));
+        if (strcmp(value, "Tf") == 0) {
+            return class_addMethod(self, sel, (IMP)dh_floatGetter, @encode(float (*)(DHConfiguration *, SEL)));
+        }
+        if (strcmp(value, "Td") == 0) {
+            return class_addMethod(self, sel, (IMP)dh_doubleGetter, @encode(double (*)(DHConfiguration *, SEL)));
         }
         if (strcmp(value, "Ti") == 0 ||
             strcmp(value, "Tq") == 0 /* 64Bit */) {
-            return class_addMethod(self, sel, (IMP)dh_integerGetter, @encode(NSInteger(*)(DHConfiguration *, SEL)));
+            return class_addMethod(self, sel, (IMP)dh_integerGetter, @encode(NSInteger (*)(DHConfiguration *, SEL)));
         }
         if (strcmp(value, "T@\"NSURL\"") == 0) {
-            return class_addMethod(self, sel, (IMP)dh_urlGetter, @encode(NSURL *(*)(DHConfiguration *, SEL)));
+            return class_addMethod(self, sel, (IMP)dh_urlGetter, @encode(NSURL * (*)(DHConfiguration *, SEL)));
         }
         if ([self canResolveInstanceMethod:sel forType:value]) {
             return YES;
         }
-        return class_addMethod(self, sel, (IMP)dh_objectGetter, @encode(id(*)(DHConfiguration *, SEL)));
+        return class_addMethod(self, sel, (IMP)dh_objectGetter, @encode(id (*)(DHConfiguration *, SEL)));
     }
-    
+
     return [super resolveInstanceMethod:sel];
 }
 
@@ -104,6 +106,7 @@ id dh_objectGetter(DHConfiguration *self, SEL _cmd) {
         propertyName = [propertyName stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:firstLetter];
         propertyName = [NSString stringWithFormat:@"%@%@", self.propertyPrefix, propertyName];
         value = self.configPlist[propertyName];
+        NSLog(@"%@", value);
     }
     return value;
 }
@@ -117,8 +120,12 @@ static BOOL dh_boolGetter(DHConfiguration *self, SEL _cmd) {
     return [dh_objectGetter(self, _cmd) boolValue];
 }
 
-static CGFloat dh_floatGetter(DHConfiguration *self, SEL _cmd) {
+static float dh_floatGetter(DHConfiguration *self, SEL _cmd) {
     return [dh_objectGetter(self, _cmd) floatValue];
+}
+
+static double dh_doubleGetter(DHConfiguration *self, SEL _cmd) {
+    return [dh_objectGetter(self, _cmd) doubleValue];
 }
 
 static NSInteger dh_integerGetter(DHConfiguration *self, SEL _cmd) {
@@ -127,14 +134,14 @@ static NSInteger dh_integerGetter(DHConfiguration *self, SEL _cmd) {
 
 @end
 
-const char * dh_property_getTypeString(objc_property_t property) {
-    const char * attrs = property_getAttributes(property);
+const char *dh_property_getTypeString(objc_property_t property) {
+    const char *attrs = property_getAttributes(property);
     if (attrs == NULL) {
         return NULL;
     }
 
     static char buffer[256];
-    const char * e = strchr(attrs, ',');
+    const char *e = strchr(attrs, ',');
     if (e == NULL) {
         return NULL;
     }

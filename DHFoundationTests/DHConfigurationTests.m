@@ -20,6 +20,7 @@
 @property (nonatomic, readonly) CGFloat testFloat;
 @property (nonatomic, readonly) NSInteger testInt;
 @property (nonatomic, readonly) NSString *testPrefix;
+@property (nonatomic, readonly) NSTimeInterval testTimeInterval;
 @end
 
 TEST_CASE(DHConfigurationTests)
@@ -70,6 +71,10 @@ Test(ItIsPossibleToLoadAFloat) {
     expect(DHTestConfiguration.sharedConfiguration.testFloat).to.equal(3.14);
 }
 
+Test(ItIsPossibleToLoadATimeInterval) {
+    expect(DHTestConfiguration.sharedConfiguration.testTimeInterval).to.beCloseToWithin(0.3, 0.0000001);
+}
+
 Test(ItIsPossibleToLoadAInt) {
     expect(DHTestConfiguration.sharedConfiguration.testInt).to.equal(3);
 }
@@ -88,6 +93,7 @@ END_TEST_CASE
 @dynamic testFloat;
 @dynamic testInt;
 @dynamic testPrefix;
+@dynamic testTimeInterval;
 
 - (NSString *)configFileName {
     return @"TestConfig";

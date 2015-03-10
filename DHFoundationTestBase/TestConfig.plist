@@ -16,5 +16,7 @@
 	<integer>3</integer>
 	<key>DHTestPrefix</key>
 	<string>Prefix string</string>
+	<key>testTimeInterval</key>
+	<real>0.3</real>
 </dict>
 </plist>

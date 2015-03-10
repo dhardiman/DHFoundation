@@ -858,6 +858,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DHFoundationTestBase/DHFoundation-Prefix.pch";
 				INFOPLIST_FILE = "DHFoundationTests/DHFoundationTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -883,6 +884,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DHFoundationTestBase/DHFoundation-Prefix.pch";
 				INFOPLIST_FILE = "DHFoundationTests/DHFoundationTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
