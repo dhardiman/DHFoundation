@@ -106,7 +106,6 @@ id dh_objectGetter(DHConfiguration *self, SEL _cmd) {
         propertyName = [propertyName stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:firstLetter];
         propertyName = [NSString stringWithFormat:@"%@%@", self.propertyPrefix, propertyName];
         value = self.configPlist[propertyName];
-        NSLog(@"%@", value);
     }
     return value;
 }
