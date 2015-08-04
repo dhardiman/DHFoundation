@@ -17,7 +17,7 @@ test:
       -sdk iphonesimulator
       -scheme "DHFoundationTestBase"
       build build-tests run-tests
-    - COVERAGE_DIR=`cat object_file_dir.txt`; lcov --directory $COVERAGE_DIR --capture --output-file coverage.info
+    # - COVERAGE_DIR=`cat object_file_dir.txt`; lcov --directory $COVERAGE_DIR --capture --output-file coverage.info
     # - bin/coveralls-lcov --repo-token $COVERALLS_REPO_TOKEN coverage.info
   post:
-    - bundle exec slather
+    - COVERAGE_DIR=`cat object_file_dir.txt`; bundle exec slather --build-directory $COVERAGE_DIR
