@@ -3,7 +3,7 @@ dependencies:
     - "/Library/Caches/Homebrew"
   override:
     - brew install lcov
-    - bundle install
+    - bundle install --path=vendor/bundle
 test:
   override:
     - xctool
