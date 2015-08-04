@@ -4,7 +4,7 @@ dependencies:
   override:
     - brew install lcov
     - bundle install --path=vendor/bundle
-    - ls ./vendor/bundle
+    - ls -R ./vendor/bundle
 test:
   override:
     - xctool
