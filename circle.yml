@@ -3,7 +3,7 @@ dependencies:
     - "/Library/Caches/Homebrew"
   override:
     - brew install lcov
-    - bundle install
+    - bundle install --binstubs
     - bundle show coveralls-lcov
 test:
   override:
@@ -19,4 +19,4 @@ test:
       -scheme "DHFoundationTestBase"
       build build-tests run-tests
     - COVERAGE_DIR=`cat object_file_dir.txt`; lcov --directory $COVERAGE_DIR --capture --output-file coverage.info
-    - coveralls-lcov --repo-token $COVERALLS_REPO_TOKEN coverage.info
+    - bin/coveralls-lcov --repo-token $COVERALLS_REPO_TOKEN coverage.info
