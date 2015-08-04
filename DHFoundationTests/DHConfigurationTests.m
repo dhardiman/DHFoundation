@@ -7,6 +7,7 @@
 //
 #import <MIQTestingFramework/MIQTestingFramework.h>
 #import "DHConfiguration.h"
+@import ObjectiveC.runtime;
 
 @interface DHConfiguration ()
 @property (nonatomic, strong) NSDictionary *configPlist;
@@ -28,6 +29,10 @@
 @interface DHTestReloadableConfiguration : DHConfiguration
 @property (nonatomic, strong) NSDictionary *sourceDictionary;
 @property (nonatomic, readonly) NSInteger testNumber;
+@end
+
+@interface DHTestCustomTypeSupportConfiguration : DHTestReloadableConfiguration
+@property (nonatomic, readonly) UIColor *testColour;
 @end
 
 @interface DHConfigurationTests : XCTestCase
@@ -108,6 +113,11 @@
     expect(DHTestReloadableConfiguration.sharedConfiguration.testNumber).to.equal(3);
 }
 
+- (void)testItIsPossibleToCreateAConfigurationWithCustomTypeSupport {
+    DHTestCustomTypeSupportConfiguration.sharedConfiguration.sourceDictionary = @{ @"testColour" : @0.5 };
+    expect(DHTestCustomTypeSupportConfiguration.sharedConfiguration.testColour).to.equal([UIColor colorWithWhite:0.5 alpha:1.0]);
+}
+
 @end
 
 @implementation DHTestConfiguration
@@ -132,6 +142,23 @@
 @dynamic testNumber;
 - (NSDictionary *)loadDictionary {
     return self.sourceDictionary;
+}
+
+@end
+
+@implementation DHTestCustomTypeSupportConfiguration
+@dynamic testColour;
+
++ (BOOL)canResolveInstanceMethod:(SEL)sel forType:(const char *)type {
+    if (strcmp(type, "T@\"UIColor\"") == 0) {
+        return class_addMethod(self, sel, (IMP)dh_colourGetter, @encode(UIColor * (*)(DHTestCustomTypeSupportConfiguration *, SEL)));
+    }
+}
+
+static UIColor *dh_colourGetter(DHTestCustomTypeSupportConfiguration *self, SEL _cmd) {
+    CGFloat value = (CGFloat)[dh_objectGetter(self, _cmd) floatValue];
+    UIColor *colour = [UIColor colorWithWhite:value alpha:1.0];
+    return colour;
 }
 
 @end
