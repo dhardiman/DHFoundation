@@ -114,7 +114,7 @@
         }
 
         [self.observers[name] enumerateObjectsUsingBlock:^(id observer, NSUInteger idx, BOOL *stop) {
-        [[NSNotificationCenter defaultCenter] removeObserver:observer];
+            [[NSNotificationCenter defaultCenter] removeObserver:observer];
         }];
 
         [self.observers[name] removeAllObjects];

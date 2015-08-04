@@ -106,4 +106,34 @@
     expect(test).to.beFalsy();
 }
 
+- (void)testItIsPossibleToRemoveAnObserver {
+    __block BOOL test = NO;
+    id observer = [self.dh_notificationStore addObserverForName:@"TestNotification" usingBlock:^(NSNotification *note) {
+        test = YES;
+    }];
+    [self.dh_notificationStore removeObserver:observer];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TestNotification" object:nil userInfo:nil];
+    expect(test).to.beFalsy();
+}
+
+- (void)testItIsPossibleToRemoveAnObserverByName {
+    __block BOOL test = NO;
+    [self.dh_notificationStore addObserverForName:@"TestNotification" usingBlock:^(NSNotification *note) {
+        test = YES;
+    }];
+    [self.dh_notificationStore removeObserversForName:@"TestNotification"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TestNotification" object:nil userInfo:nil];
+    expect(test).to.beFalsy();
+}
+
+- (void)testSubscripting {
+    __block BOOL test = NO;
+    [self.dh_notificationStore addObserverForName:@"TestNotification" usingBlock:^(NSNotification *note) {
+        test = YES;
+    }];
+    [self.dh_notificationStore removeObserver:[self.dh_notificationStore[@"TestNotification"] firstObject]];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TestNotification" object:nil userInfo:nil];
+    expect(test).to.beFalsy();
+}
+
 @end
