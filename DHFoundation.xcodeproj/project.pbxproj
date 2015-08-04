@@ -86,6 +86,7 @@
 		45DE09661A1A57F1008EC57A /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09641A1A57F1008EC57A /* Config.plist */; };
 		45DE09671A1A57F1008EC57A /* TestConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09651A1A57F1008EC57A /* TestConfig.plist */; };
 		45E7C6E81B70B8EA0008B2A7 /* DHJSONTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E7C6E71B70B8EA0008B2A7 /* DHJSONTests.m */; };
+		45E7C6EA1B70BA270008B2A7 /* DHDynamicCastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E7C6E91B70BA270008B2A7 /* DHDynamicCastTests.m */; };
 		96B8516D17A25B0A0057D482 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B8516C17A25B0A0057D482 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
@@ -177,6 +178,7 @@
 		45DE09641A1A57F1008EC57A /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		45DE09651A1A57F1008EC57A /* TestConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestConfig.plist; sourceTree = "<group>"; };
 		45E7C6E71B70B8EA0008B2A7 /* DHJSONTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHJSONTests.m; sourceTree = "<group>"; };
+		45E7C6E91B70BA270008B2A7 /* DHDynamicCastTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHDynamicCastTests.m; sourceTree = "<group>"; };
 		96B8516817A25A470057D482 /* DHReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DHReachability.h; path = Reachability/DHReachability.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		96B8516917A25A470057D482 /* DHReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DHReachability.m; path = Reachability/DHReachability.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		96B8516C17A25B0A0057D482 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -337,6 +339,7 @@
 				45DE095E1A1A574C008EC57A /* DHConfigurationTests.m */,
 				450A4B951A36EC5D001D9577 /* DHPrepareForSegueTests.m */,
 				45E7C6E71B70B8EA0008B2A7 /* DHJSONTests.m */,
+				45E7C6E91B70BA270008B2A7 /* DHDynamicCastTests.m */,
 			);
 			path = DHFoundationTests;
 			sourceTree = "<group>";
@@ -695,6 +698,7 @@
 			files = (
 				45DE095F1A1A574C008EC57A /* DHConfigurationTests.m in Sources */,
 				450A4B961A36EC5D001D9577 /* DHPrepareForSegueTests.m in Sources */,
+				45E7C6EA1B70BA270008B2A7 /* DHDynamicCastTests.m in Sources */,
 				45E7C6E81B70B8EA0008B2A7 /* DHJSONTests.m in Sources */,
 				076321E317940E0B00846D0D /* DHNotificationsTest.m in Sources */,
 				0731648C17967ECC00930FCE /* DHDateFormatterTests.m in Sources */,
