@@ -153,6 +153,7 @@
     if (strcmp(type, "T@\"UIColor\"") == 0) {
         return class_addMethod(self, sel, (IMP)dh_colourGetter, @encode(UIColor * (*)(DHTestCustomTypeSupportConfiguration *, SEL)));
     }
+    return NO;
 }
 
 static UIColor *dh_colourGetter(DHTestCustomTypeSupportConfiguration *self, SEL _cmd) {

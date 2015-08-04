@@ -8,6 +8,7 @@
 
 @import MIQTestingFramework;
 #import "NSObject+JSONSerialise.h"
+#import "NSData+JSONDeserialise.h"
 
 @interface DHJSONTests : XCTestCase
 
@@ -23,6 +24,16 @@
 - (void)testItIsPossibleToConvertAnObjectToJSONData {
     NSDictionary *testObject = @{ @"test" : @"testing" };
     expect(testObject.JSONData).to.equal([@"{\"test\":\"testing\"}" dataUsingEncoding:NSUTF8StringEncoding]);
+}
+
+- (void)testItIsPossibleToConvertAJSONStringToADictionary {
+    NSDictionary *testObject = @"{\"test\":\"testing\"}".objectFromJSONString;
+    expect(testObject).to.equal(@{ @"test" : @"testing" });
+}
+
+- (void)testItIsPossibleToConvertJSONDataToAnObject {
+    NSDictionary *testObject = [@"{\"test\":\"testing\"}" dataUsingEncoding:NSUTF8StringEncoding].objectFromJSONData;
+    expect(testObject).to.equal(@{ @"test" : @"testing" });
 }
 
 @end
