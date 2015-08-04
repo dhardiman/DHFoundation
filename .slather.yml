@@ -1,0 +1,3 @@
+coverage_service: coveralls
+xcodeproj: DHFoundation.xcodeproj
+source_directory: DHFoundation/
