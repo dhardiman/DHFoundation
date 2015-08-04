@@ -4,7 +4,6 @@ dependencies:
   override:
     - brew install lcov
     - bundle install --binstubs
-    - bundle show coveralls-lcov
 test:
   override:
     - xctool
