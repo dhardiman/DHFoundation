@@ -126,6 +126,18 @@
     expect(test).to.beFalsy();
 }
 
+- (void)testAttemptingToRemoveAnObserverForAnUnknownNameDoesNothing {
+    expect(^{
+        __block BOOL test = NO;
+        [self.dh_notificationStore addObserverForName:@"TestNotification" usingBlock:^(NSNotification *note) {
+            test = YES;
+        }];
+        [self.dh_notificationStore removeObserversForName:@"UnknownNotification"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"TestNotification" object:nil userInfo:nil];
+        expect(test).to.beTruthy();
+    }).notTo.raiseAny();
+}
+
 - (void)testSubscripting {
     __block BOOL test = NO;
     [self.dh_notificationStore addObserverForName:@"TestNotification" usingBlock:^(NSNotification *note) {
