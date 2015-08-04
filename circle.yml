@@ -1,3 +1,6 @@
+dependencies:
+  override:
+    - pip install cpp-coveralls
 test:
   override:
     - xctool
