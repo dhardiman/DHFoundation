@@ -4,6 +4,7 @@ dependencies:
   override:
     - brew install lcov
     - bundle install --path=vendor/bundle
+    - ls ./vendor/bundle
 test:
   override:
     - xctool
@@ -18,4 +19,4 @@ test:
       -scheme "DHFoundationTestBase"
       build build-tests run-tests
     - COVERAGE_DIR=`cat object_file_dir.txt`; lcov --directory $COVERAGE_DIR --capture --output-file coverage.info
-    - coveralls-lcov --repo-token $COVERALLS_REPO_TOKEN coverage.info
+    - ./vendor/bundle/coveralls-lcov --repo-token $COVERALLS_REPO_TOKEN coverage.info
