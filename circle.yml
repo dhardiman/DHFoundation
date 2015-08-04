@@ -3,7 +3,7 @@ dependencies:
     - "/Library/Caches/Homebrew"
   override:
     - brew install lcov
-    - gem install coveralls-lcov-1.1.2.gem
+    - bundle install
 test:
   override:
     - xctool
