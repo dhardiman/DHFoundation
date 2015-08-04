@@ -82,6 +82,7 @@
 		454C84981A485B3700DC63B5 /* DHNotificationStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 076321D417940D0A00846D0D /* DHNotificationStore.m */; };
 		454C84991A485B3A00DC63B5 /* NSObject+Notifications.h in Headers */ = {isa = PBXBuildFile; fileRef = 076321D517940D0A00846D0D /* NSObject+Notifications.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		454C849A1A485B3F00DC63B5 /* NSObject+Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 076321D617940D0A00846D0D /* NSObject+Notifications.m */; };
+		45AF4F5C1B710D0500F93AC1 /* DHReachabilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AF4F5B1B710D0500F93AC1 /* DHReachabilityTests.m */; };
 		45DE095F1A1A574C008EC57A /* DHConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DE095E1A1A574C008EC57A /* DHConfigurationTests.m */; };
 		45DE09661A1A57F1008EC57A /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09641A1A57F1008EC57A /* Config.plist */; };
 		45DE09671A1A57F1008EC57A /* TestConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09651A1A57F1008EC57A /* TestConfig.plist */; };
@@ -173,6 +174,7 @@
 		454C84621A485A5500DC63B5 /* DHFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DHFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		454C84651A485A5500DC63B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		454C84661A485A5500DC63B5 /* DHFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHFoundation.h; sourceTree = "<group>"; };
+		45AF4F5B1B710D0500F93AC1 /* DHReachabilityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHReachabilityTests.m; sourceTree = "<group>"; };
 		45DE095E1A1A574C008EC57A /* DHConfigurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHConfigurationTests.m; sourceTree = "<group>"; };
 		45DE09601A1A5771008EC57A /* DHConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHConfiguration.h; sourceTree = "<group>"; };
 		45DE09611A1A5771008EC57A /* DHConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHConfiguration.m; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				45E7C6E71B70B8EA0008B2A7 /* DHJSONTests.m */,
 				45E7C6E91B70BA270008B2A7 /* DHDynamicCastTests.m */,
 				45E7C6EB1B70E5390008B2A7 /* DHDateExtensionTests.m */,
+				45AF4F5B1B710D0500F93AC1 /* DHReachabilityTests.m */,
 			);
 			path = DHFoundationTests;
 			sourceTree = "<group>";
@@ -699,6 +702,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45AF4F5C1B710D0500F93AC1 /* DHReachabilityTests.m in Sources */,
 				45DE095F1A1A574C008EC57A /* DHConfigurationTests.m in Sources */,
 				450A4B961A36EC5D001D9577 /* DHPrepareForSegueTests.m in Sources */,
 				45E7C6EA1B70BA270008B2A7 /* DHDynamicCastTests.m in Sources */,

@@ -31,7 +31,7 @@
 - (void)setChanged:(DHReachabilityChanged)reachabilityChanged {
     [self.dh_notificationStore removeObserversForName:DHReachabilityChangedNotification];
     DHWeak(self);
-    [self.dh_notificationStore addObserverForName:DHReachabilityChangedNotification usingBlock:^(NSNotification *note) {
+    [self.dh_notificationStore addObserverForName:DHReachabilityChangedNotification object:self.reachability usingBlock:^(NSNotification *note) {
         DHStrong(self);
         reachabilityChanged([self.reachability currentReachabilityStatus]);
     }];
