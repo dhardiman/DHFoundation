@@ -2,3 +2,5 @@ coverage_service: coveralls
 ci_service: circleci
 xcodeproj: DHFoundation.xcodeproj
 source_directory: DHFoundation/
+ignore:
+  - DHFoundation/Reachability/DHReachability.*
