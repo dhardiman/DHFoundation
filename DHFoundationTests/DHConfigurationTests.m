@@ -25,6 +25,11 @@
 @property (nonatomic, readonly, getter=isTestIsPrefix) BOOL testIsPrefix;
 @end
 
+@interface DHTestReloadableConfiguration : DHConfiguration
+@property (nonatomic, strong) NSDictionary *sourceDictionary;
+@property (nonatomic, readonly) NSInteger testNumber;
+@end
+
 @interface DHConfigurationTests : XCTestCase
 @end
 @implementation DHConfigurationTests
@@ -95,6 +100,14 @@
     expect([DHTestConfiguration.sharedConfiguration isTestIsPrefix]).to.beTruthy();
 }
 
+- (void)testItIsPossibleToReloadTheDictionary {
+    DHTestReloadableConfiguration.sharedConfiguration.sourceDictionary = @{ @"testNumber" : @4 };
+    expect(DHTestReloadableConfiguration.sharedConfiguration.testNumber).to.equal(4);
+    DHTestReloadableConfiguration.sharedConfiguration.sourceDictionary = @{ @"testNumber" : @3 };
+    [DHTestReloadableConfiguration.sharedConfiguration reloadConfig];
+    expect(DHTestReloadableConfiguration.sharedConfiguration.testNumber).to.equal(3);
+}
+
 @end
 
 @implementation DHTestConfiguration
@@ -111,6 +124,14 @@
 
 - (NSString *)configFileName {
     return @"TestConfig";
+}
+
+@end
+
+@implementation DHTestReloadableConfiguration
+@dynamic testNumber;
+- (NSDictionary *)loadDictionary {
+    return self.sourceDictionary;
 }
 
 @end
