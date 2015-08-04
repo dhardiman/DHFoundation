@@ -3,7 +3,7 @@ dependencies:
     - "/Library/Caches/Homebrew"
   override:
     - brew install lcov
-    - bundle install --binstubs
+    - bundle install
 test:
   override:
     - xctool
@@ -20,4 +20,4 @@ test:
     - COVERAGE_DIR=`cat object_file_dir.txt`; lcov --directory $COVERAGE_DIR --capture --output-file coverage.info
     # - bin/coveralls-lcov --repo-token $COVERALLS_REPO_TOKEN coverage.info
   post:
-    - bin/slather
+    - bundle exec slather
