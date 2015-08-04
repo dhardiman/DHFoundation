@@ -36,4 +36,9 @@
     expect(testObject).to.equal(@{ @"test" : @"testing" });
 }
 
+- (void)testItIsPossibleToConvertJSONDataToAMutableObject {
+    NSMutableDictionary *testObject = [@"{\"test\":\"testing\"}" dataUsingEncoding:NSUTF8StringEncoding].mutableObjectFromJSONData;
+    expect(testObject).to.equal(@{ @"test" : @"testing" }.mutableCopy);
+}
+
 @end
