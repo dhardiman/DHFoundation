@@ -63,6 +63,33 @@
     expect(test).to.beTruthy();
 }
 
+- (void)testItIsPossibleToDispatchNotificationsOnOtherQueues {
+    __block BOOL test = NO;
+    NSOperationQueue *testQueue = [[NSOperationQueue alloc] init];
+    __block NSOperationQueue *receivedQueue = nil;
+    [self.dh_notificationStore addObserversForNames:@[ @"TestNotification", @"TestNotification1" ] queue:testQueue usingBlock:^(NSNotification *note) {
+        receivedQueue = NSOperationQueue.currentQueue;
+        test = YES;
+    }];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TestNotification" object:nil userInfo:nil];
+    expect(test).will.beTruthy();
+    expect(receivedQueue).to.equal(testQueue);
+    test = false;
+    receivedQueue = nil;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TestNotification1" object:nil userInfo:nil];
+    expect(test).will.beTruthy();
+    expect(receivedQueue).to.equal(testQueue);
+    test = false;
+    receivedQueue = nil;
+    [self.dh_notificationStore addObserverForName:@"TestNotification2" queue:testQueue usingBlock:^(NSNotification *note) {
+        receivedQueue = NSOperationQueue.currentQueue;
+        test = YES;
+    }];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TestNotification2" object:nil userInfo:nil];
+    expect(test).will.beTruthy();
+    expect(receivedQueue).to.equal(testQueue);
+}
+
 - (void)testNotificationBlocksDeRegisterAtDeallocation {
     __block BOOL test = NO;
     @autoreleasepool {
