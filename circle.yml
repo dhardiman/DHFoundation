@@ -18,4 +18,4 @@ test:
       -scheme "DHFoundationTestBase"
       build build-tests run-tests
     - COVERAGE_DIR=`cat object_file_dir.txt`; lcov --directory $COVERAGE_DIR --capture --output-file coverage.info
-    - overalls-lcov --repo-token $COVERALLS_REPO_TOKEN coverage.info
+    - coveralls-lcov --repo-token $COVERALLS_REPO_TOKEN coverage.info
