@@ -17,13 +17,17 @@
 @property (nonatomic, readonly) NSNumber *testNumber;
 @property (nonatomic, readonly) NSURL *testURL;
 @property (nonatomic, readonly) BOOL testBOOL;
-@property (nonatomic, readonly) CGFloat testFloat;
+@property (nonatomic, readonly) double testDouble;
+@property (nonatomic, readonly) float testFloat;
 @property (nonatomic, readonly) NSInteger testInt;
 @property (nonatomic, readonly) NSString *testPrefix;
 @property (nonatomic, readonly) NSTimeInterval testTimeInterval;
+@property (nonatomic, readonly, getter=isTestIsPrefix) BOOL testIsPrefix;
 @end
 
-TEST_CASE(DHConfigurationTests)
+@interface DHConfigurationTests : XCTestCase
+@end
+@implementation DHConfigurationTests
 
 - (void)setUp {
     [super setUp];
@@ -34,56 +38,64 @@ TEST_CASE(DHConfigurationTests)
     [super tearDown];
 }
 
-Test(ThereIsASharedConfiguration) {
+- (void)testThereIsASharedConfiguration {
     DHConfiguration *sharedConfiguration = DHConfiguration.sharedConfiguration;
     expect(sharedConfiguration).notTo.beNil();
     expect(sharedConfiguration).to.equal(DHConfiguration.sharedConfiguration);
 }
 
-Test(EachConfigurationClassHasItsOwnSharedInstance) {
+- (void)testEachConfigurationClassHasItsOwnSharedInstance {
     DHConfiguration *sharedConfiguration = DHConfiguration.sharedConfiguration;
     DHTestConfiguration *sharedTestConfiguration = DHTestConfiguration.sharedConfiguration;
     expect(sharedConfiguration).notTo.beIdenticalTo(sharedTestConfiguration);
 }
 
-Test(ItLoadsTheConfigFile) {
+- (void)testItLoadsTheConfigFile {
     expect(DHConfiguration.sharedConfiguration.configPlist).notTo.beNil();
     expect(DHTestConfiguration.sharedConfiguration.configPlist).notTo.beNil();
 }
 
-Test(ItIsPossibleToLoadAString) {
+- (void)testItIsPossibleToLoadAString {
     expect(DHTestConfiguration.sharedConfiguration.testString).to.equal(@"A test string");
 }
 
-Test(ItIsPossibleToLoadANumber) {
+- (void)testItIsPossibleToLoadANumber {
     expect(DHTestConfiguration.sharedConfiguration.testNumber).to.equal(@3);
 }
 
-Test(ItIsPossibleToLoadAURL) {
+- (void)testItIsPossibleToLoadAURL {
     expect(DHTestConfiguration.sharedConfiguration.testURL).to.equal([NSURL URLWithString:@"http://www.google.com/"]);
 }
 
-Test(ItIsPossibleToLoadABool) {
+- (void)testItIsPossibleToLoadABool {
     expect(DHTestConfiguration.sharedConfiguration.testBOOL).to.beTruthy();
 }
 
-Test(ItIsPossibleToLoadAFloat) {
+- (void)testItIsPossibleToLoadAFloat {
     expect(DHTestConfiguration.sharedConfiguration.testFloat).to.equal(3.14);
 }
 
-Test(ItIsPossibleToLoadATimeInterval) {
+- (void)testItIsPossibleToLoadADouble {
+    expect(DHTestConfiguration.sharedConfiguration.testDouble).to.equal(6.28);
+}
+
+- (void)testItIsPossibleToLoadATimeInterval {
     expect(DHTestConfiguration.sharedConfiguration.testTimeInterval).to.beCloseToWithin(0.3, 0.0000001);
 }
 
-Test(ItIsPossibleToLoadAInt) {
+- (void)testItIsPossibleToLoadAInt {
     expect(DHTestConfiguration.sharedConfiguration.testInt).to.equal(3);
 }
 
-Test(ItIsPossibleToSpecifyAPrefix) {
+- (void)testItIsPossibleToSpecifyAPrefix {
     expect(DHTestConfiguration.sharedConfiguration.testPrefix).to.equal(@"Prefix string");
 }
 
-END_TEST_CASE
+- (void)testItHandlesAGetterWithAnIsPrefix {
+    expect([DHTestConfiguration.sharedConfiguration isTestIsPrefix]).to.beTruthy();
+}
+
+@end
 
 @implementation DHTestConfiguration
 @dynamic testString;
@@ -91,9 +103,11 @@ END_TEST_CASE
 @dynamic testURL;
 @dynamic testBOOL;
 @dynamic testFloat;
+@dynamic testDouble;
 @dynamic testInt;
 @dynamic testPrefix;
 @dynamic testTimeInterval;
+@dynamic testIsPrefix;
 
 - (NSString *)configFileName {
     return @"TestConfig";

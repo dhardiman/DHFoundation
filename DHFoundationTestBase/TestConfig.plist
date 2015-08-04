@@ -12,11 +12,15 @@
 	<true/>
 	<key>testFloat</key>
 	<real>3.14</real>
+	<key>testDouble</key>
+	<real>6.28</real>
 	<key>testInt</key>
 	<integer>3</integer>
 	<key>DHTestPrefix</key>
 	<string>Prefix string</string>
 	<key>testTimeInterval</key>
 	<real>0.3</real>
+	<key>isTestIsPrefix</key>
+	<true/>
 </dict>
 </plist>
