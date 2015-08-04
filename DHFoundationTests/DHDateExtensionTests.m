@@ -17,7 +17,7 @@
 
 - (void)testDatesCanBeAfterOtherDates {
     NSDate *firstDate = NSDate.date;
-    NSDate *secondDate = NSDate.date;
+    NSDate *secondDate = [firstDate dateByAddingTimeInterval:1];
     expect([firstDate isAfter:nil]).to.beTruthy();
     expect([firstDate isAfter:secondDate]).to.beFalsy();
     expect([secondDate isAfter:firstDate]).to.beTruthy();
@@ -25,7 +25,7 @@
 
 - (void)testDatesCanBeBeforeOtherDates {
     NSDate *firstDate = NSDate.date;
-    NSDate *secondDate = NSDate.date;
+    NSDate *secondDate = [firstDate dateByAddingTimeInterval:1];
     expect([firstDate isBefore:nil]).to.beFalsy();
     expect([firstDate isBefore:secondDate]).to.beTruthy();
     expect([secondDate isBefore:firstDate]).to.beFalsy();
