@@ -20,4 +20,4 @@ test:
     # - COVERAGE_DIR=`cat object_file_dir.txt`; lcov --directory $COVERAGE_DIR --capture --output-file coverage.info
     # - bin/coveralls-lcov --repo-token $COVERALLS_REPO_TOKEN coverage.info
   post:
-    - COVERAGE_DIR=`cat object_file_dir.txt`; bundle exec slather --build-directory $COVERAGE_DIR
+    - COVERAGE_DIR=`cat object_file_dir.txt`; bundle exec slather coverage --build-directory $COVERAGE_DIR
