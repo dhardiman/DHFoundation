@@ -1,6 +1,8 @@
 DHFoundation
 ============
 
+[![Circle CI](https://circleci.com/gh/dhardiman/DHFoundation/tree/master.svg?style=svg&circle-token=c937df2f6f9c74c2406117885b43ad86c515c32f)](https://circleci.com/gh/dhardiman/DHFoundation/tree/master) [![Coverage Status](https://coveralls.io/repos/dhardiman/DHFoundation/badge.svg?branch=master&service=github)](https://coveralls.io/github/dhardiman/DHFoundation?branch=master)
+
 Common repository of useful iOS code.
 
 ## `DHNotificationStore`
@@ -10,7 +12,7 @@ Instead of
 
 ```
 // We need to hang on to this observer object to remove later
-id observer = 
+id observer =
 [[NSNotificationCenter defaultCenter] addObserverForName:DHNotificationName
                                                   object:nil
                                                    queue:[NSOperationQueue currentQueue]
@@ -37,7 +39,7 @@ I wish I could remember the blog post where I discovered this idea so I could cr
 This is a simple way to handle reachability changes within a class. Via a category on `NSObject`, each class is given a `dh_reachability` class that exposes both a `DHReachability` object, which is simply Apple's `Reachability` class but namespaced, as well as a `changed` event handler block that will be fired whenever the reachability status changes.
 
 ## `UIViewController+DHPrepareForSegue`
-Category method to try to avoid endless `if/else` blocks in `prepareForSegue:sender:` methods. Simply call `dh_prepareSegueWithIdentifier:destinationViewController:sourceViewController:sender` within `prepareForSegue:sender:` and the method will try to call a method with the same name as the segue identifier. For example, if a segue within a view controller has the identifier `showDetailViewController:`, we can simply write 
+Category method to try to avoid endless `if/else` blocks in `prepareForSegue:sender:` methods. Simply call `dh_prepareSegueWithIdentifier:destinationViewController:sourceViewController:sender` within `prepareForSegue:sender:` and the method will try to call a method with the same name as the segue identifier. For example, if a segue within a view controller has the identifier `showDetailViewController:`, we can simply write
 
 ```
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
