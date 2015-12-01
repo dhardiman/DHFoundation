@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F22EEF2DFED620A5467D9BB4EC0CE9555C0A737E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DC02B897EB888C78AF297B6E60A138794ECB7650" : 0,
+    "F22EEF2DFED620A5467D9BB4EC0CE9555C0A737E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "274552A8-8784-4D0E-83BB-5DAA66CCF758",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DC02B897EB888C78AF297B6E60A138794ECB7650" : "",
+    "F22EEF2DFED620A5467D9BB4EC0CE9555C0A737E" : "DHFoundation"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DHFoundation",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DHFoundation.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dhardiman\/DHCoreData.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DC02B897EB888C78AF297B6E60A138794ECB7650"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dhardiman\/DHFoundation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F22EEF2DFED620A5467D9BB4EC0CE9555C0A737E"
+    }
+  ]
+}
