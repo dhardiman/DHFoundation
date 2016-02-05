@@ -83,6 +83,8 @@
 		454C84991A485B3A00DC63B5 /* NSObject+Notifications.h in Headers */ = {isa = PBXBuildFile; fileRef = 076321D517940D0A00846D0D /* NSObject+Notifications.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		454C849A1A485B3F00DC63B5 /* NSObject+Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 076321D617940D0A00846D0D /* NSObject+Notifications.m */; };
 		45AF4F5C1B710D0500F93AC1 /* DHReachabilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AF4F5B1B710D0500F93AC1 /* DHReachabilityTests.m */; };
+		45DCB9741C64ECE40008B7D1 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09641A1A57F1008EC57A /* Config.plist */; };
+		45DCB9751C64ECE40008B7D1 /* TestConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09651A1A57F1008EC57A /* TestConfig.plist */; };
 		45DE095F1A1A574C008EC57A /* DHConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DE095E1A1A574C008EC57A /* DHConfigurationTests.m */; };
 		45DE09661A1A57F1008EC57A /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09641A1A57F1008EC57A /* Config.plist */; };
 		45DE09671A1A57F1008EC57A /* TestConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09651A1A57F1008EC57A /* TestConfig.plist */; };
@@ -617,6 +619,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45DCB9741C64ECE40008B7D1 /* Config.plist in Resources */,
+				45DCB9751C64ECE40008B7D1 /* TestConfig.plist in Resources */,
 				076321AB179409CA00846D0D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -878,7 +882,7 @@
 		076321B5179409CA00846D0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DHFoundationTestBase.app/DHFoundationTestBase";
+				BUNDLE_LOADER = "";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
@@ -897,14 +901,14 @@
 					CoreData,
 				);
 				PRODUCT_NAME = DHFoundationTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "";
 			};
 			name = Debug;
 		};
 		076321B6179409CA00846D0D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DHFoundationTestBase.app/DHFoundationTestBase";
+				BUNDLE_LOADER = "";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
@@ -923,7 +927,7 @@
 					CoreData,
 				);
 				PRODUCT_NAME = DHFoundationTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "";
 			};
 			name = Release;
 		};

@@ -33,8 +33,15 @@ const char *dh_property_getTypeString(objc_property_t property);
     return @"Config";
 }
 
+- (NSBundle *)configBundle {
+    if (!_configBundle) {
+        _configBundle = NSBundle.mainBundle;
+    }
+    return _configBundle;
+}
+
 - (NSDictionary *)loadDictionary {
-    NSString *configPath = [[NSBundle mainBundle] pathForResource:self.configFileName ofType:@"plist"];
+    NSString *configPath = [self.configBundle pathForResource:self.configFileName ofType:@"plist"];
     return [NSDictionary dictionaryWithContentsOfFile:configPath];
 }
 

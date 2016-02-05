@@ -35,6 +35,11 @@
 @property (nonatomic, copy) NSString *propertyPrefix;
 
 /**
+ *  The bundle to load the configuration from. Defaults to `mainBundle`
+ */
+@property (nonatomic, strong) NSBundle *configBundle;
+
+/**
  Clears the config dictionary for reloading
  */
 - (void)reloadConfig;

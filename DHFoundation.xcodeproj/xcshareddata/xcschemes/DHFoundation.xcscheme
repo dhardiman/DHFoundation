@@ -20,15 +20,49 @@
                ReferencedContainer = "container:DHFoundation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0763219E179409CA00846D0D"
+               BuildableName = "DHFoundationTests.xctest"
+               BlueprintName = "DHFoundationTests"
+               ReferencedContainer = "container:DHFoundation.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0763219E179409CA00846D0D"
+               BuildableName = "DHFoundationTests.xctest"
+               BlueprintName = "DHFoundationTests"
+               ReferencedContainer = "container:DHFoundation.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "454C84611A485A5500DC63B5"
+            BuildableName = "DHFoundation.framework"
+            BlueprintName = "DHFoundationFramework"
+            ReferencedContainer = "container:DHFoundation.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

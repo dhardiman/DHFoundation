@@ -41,6 +41,7 @@
 
 - (void)setUp {
     [super setUp];
+    DHTestConfiguration.sharedConfiguration.configBundle = [NSBundle bundleForClass:self.class];
     DHTestConfiguration.sharedConfiguration.propertyPrefix = @"DH";
 }
 
@@ -61,6 +62,7 @@
 }
 
 - (void)testItLoadsTheConfigFile {
+    DHConfiguration.sharedConfiguration.configBundle = [NSBundle bundleForClass:self.class];
     expect(DHConfiguration.sharedConfiguration.configPlist).notTo.beNil();
     expect(DHTestConfiguration.sharedConfiguration.configPlist).notTo.beNil();
 }
