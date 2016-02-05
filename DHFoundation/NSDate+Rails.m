@@ -46,7 +46,7 @@
     if ([comps day] != [nowComponents day] ||
         [comps month] != [nowComponents month] ||
         [comps year] != [nowComponents year] ||
-        [comps era] != [comps era]) {
+        [comps era] != [nowComponents era]) {
         return NO;
     }
 
