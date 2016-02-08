@@ -5,17 +5,12 @@ dependencies:
   cache_directories:
     - "/Library/Caches/Homebrew"
   override:
-    - brew install lcov
     - bundle install --path=vendor/bundle
 test:
   override:
-    - xctool
-      -reporter pretty
-      -reporter junit:$CIRCLE_TEST_REPORTS/xcode/results.xml
-      -reporter plain:$CIRCLE_ARTIFACTS/xctool.log
-      -destination 'platform=iOS Simulator,name=iPhone 6,OS=latest'
-      -sdk iphonesimulator
-      -scheme "DHFoundation"
-      build build-tests run-tests
+    - xcodebuild -destination 'platform=iOS Simulator,name=iPhone 6,OS=latest'
+      -sdk iphonesimulator -scheme "DHFoundation" clean test |
+      tee $CIRCLE_ARTIFACTS/xcodebuild.log |
+      xcpretty --report html --output $CIRCLE_TEST_REPORTS/results.html --report junit --output $CIRCLE_TEST_REPORTS/results.xml
   post:
-    - COVERAGE_DIR=`cat object_file_dir.txt`; bundle exec slather coverage --build-directory $COVERAGE_DIR
+    - COVERAGE_DIR=`xcodebuild -scheme "DHFoundation" -showBuildSettings | perl -lne 'print $1 if /OBJROOT\s=\s(.*)/'`; bundle exec slather coverage --build-directory $COVERAGE_DIR/CodeCoverage/DHFoundation
