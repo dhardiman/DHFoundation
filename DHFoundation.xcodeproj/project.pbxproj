@@ -85,6 +85,7 @@
 		45AF4F5C1B710D0500F93AC1 /* DHReachabilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AF4F5B1B710D0500F93AC1 /* DHReachabilityTests.m */; };
 		45DCB9741C64ECE40008B7D1 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09641A1A57F1008EC57A /* Config.plist */; };
 		45DCB9751C64ECE40008B7D1 /* TestConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09651A1A57F1008EC57A /* TestConfig.plist */; };
+		45DCB9781C688D460008B7D1 /* DHFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454C84621A485A5500DC63B5 /* DHFoundation.framework */; };
 		45DE095F1A1A574C008EC57A /* DHConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DE095E1A1A574C008EC57A /* DHConfigurationTests.m */; };
 		45DE09661A1A57F1008EC57A /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09641A1A57F1008EC57A /* Config.plist */; };
 		45DE09671A1A57F1008EC57A /* TestConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45DE09651A1A57F1008EC57A /* TestConfig.plist */; };
@@ -95,14 +96,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		076321A4179409CA00846D0D /* PBXContainerItemProxy */ = {
+		454C84771A485A5600DC63B5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0763216B179409CA00846D0D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 07632172179409CA00846D0D;
-			remoteInfo = DHFoundationTestBase;
+			remoteGlobalIDString = 454C84611A485A5500DC63B5;
+			remoteInfo = DHFoundationFramework;
 		};
-		454C84771A485A5600DC63B5 /* PBXContainerItemProxy */ = {
+		45DCB9761C688CEB0008B7D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0763216B179409CA00846D0D /* Project object */;
 			proxyType = 1;
@@ -209,6 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45DCB9781C688D460008B7D1 /* DHFoundation.framework in Frameworks */,
 				076321A2179409CA00846D0D /* UIKit.framework in Frameworks */,
 				07800DBD17AFDC8B00E6020B /* SystemConfiguration.framework in Frameworks */,
 				076321A3179409CA00846D0D /* Foundation.framework in Frameworks */,
@@ -529,7 +531,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				076321A5179409CA00846D0D /* PBXTargetDependency */,
+				45DCB9771C688CEB0008B7D1 /* PBXTargetDependency */,
 			);
 			name = DHFoundationTests;
 			productName = DHFoundationTests;
@@ -710,15 +712,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		076321A5179409CA00846D0D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 07632172179409CA00846D0D /* DHFoundationTestBase */;
-			targetProxy = 076321A4179409CA00846D0D /* PBXContainerItemProxy */;
-		};
 		454C84781A485A5600DC63B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 454C84611A485A5500DC63B5 /* DHFoundationFramework */;
 			targetProxy = 454C84771A485A5600DC63B5 /* PBXContainerItemProxy */;
+		};
+		45DCB9771C688CEB0008B7D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 454C84611A485A5500DC63B5 /* DHFoundationFramework */;
+			targetProxy = 45DCB9761C688CEB0008B7D1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
