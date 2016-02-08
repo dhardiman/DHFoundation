@@ -4,4 +4,4 @@ xcodeproj: DHFoundation.xcodeproj
 source_directory: DHFoundation/
 ignore:
   - DHFoundation/Reachability/DHReachability.*
-  - /../simulator-sdks/
+  - */simulator-sdks/*
