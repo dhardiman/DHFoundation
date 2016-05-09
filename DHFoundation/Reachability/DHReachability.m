@@ -1,15 +1,15 @@
 /*
  File: Reachability.m
  Abstract: Basic demonstration of how to use the SystemConfiguration Reachablity APIs.
- Version: 3.5
- 
- Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
+ Version: 5.0
+
+ IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
  terms, and your use, installation, modification or redistribution of
  this Apple software constitutes acceptance of these terms.  If you do
  not agree with these terms, please do not use, install, modify or
  redistribute this Apple software.
- 
+
  In consideration of your agreement to abide by the following terms, and
  subject to these terms, Apple grants you a personal, non-exclusive
  license, under Apple's copyrights in this original Apple software (the
@@ -25,13 +25,13 @@
  implied, are granted by Apple herein, including but not limited to any
  patent rights that may be infringed by your derivative works or by other
  works in which the Apple Software may be incorporated.
- 
+
  The Apple Software is provided by Apple on an "AS IS" basis.  APPLE
  MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
  THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
  FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
  OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
- 
+
  IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
  OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
@@ -40,8 +40,8 @@
  AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
- 
- Copyright (C) 2014 Apple Inc. All Rights Reserved.
+
+ Copyright (C) 2016 Apple Inc. All Rights Reserved.
  
  */
 
@@ -91,7 +91,6 @@ static void DHReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
 #pragma mark - Reachability implementation
 
 @implementation DHReachability {
-    BOOL _alwaysReturnLocalWiFiStatus; //default is NO
     SCNetworkReachabilityRef _reachabilityRef;
 }
 
@@ -102,14 +101,15 @@ static void DHReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
         returnValue = [[self alloc] init];
         if (returnValue != NULL) {
             returnValue->_reachabilityRef = reachability;
-            returnValue->_alwaysReturnLocalWiFiStatus = NO;
+        } else {
+            CFRelease(reachability);
         }
     }
     return returnValue;
 }
 
-+ (instancetype)reachabilityWithAddress:(const struct sockaddr_in *)hostAddress {
-    SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithAddress(kCFAllocatorDefault, (const struct sockaddr *)hostAddress);
++ (instancetype)reachabilityWithAddress:(const struct sockaddr *)hostAddress {
+    SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithAddress(kCFAllocatorDefault, hostAddress);
 
     DHReachability *returnValue = NULL;
 
@@ -117,7 +117,8 @@ static void DHReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
         returnValue = [[self alloc] init];
         if (returnValue != NULL) {
             returnValue->_reachabilityRef = reachability;
-            returnValue->_alwaysReturnLocalWiFiStatus = NO;
+        } else {
+            CFRelease(reachability);
         }
     }
     return returnValue;
@@ -129,24 +130,7 @@ static void DHReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
     zeroAddress.sin_len = sizeof(zeroAddress);
     zeroAddress.sin_family = AF_INET;
 
-    return [self reachabilityWithAddress:&zeroAddress];
-}
-
-+ (instancetype)reachabilityForLocalWiFi {
-    struct sockaddr_in localWifiAddress;
-    bzero(&localWifiAddress, sizeof(localWifiAddress));
-    localWifiAddress.sin_len = sizeof(localWifiAddress);
-    localWifiAddress.sin_family = AF_INET;
-
-    // IN_LINKLOCALNETNUM is defined in <netinet/in.h> as 169.254.0.0.
-    localWifiAddress.sin_addr.s_addr = htonl(IN_LINKLOCALNETNUM);
-
-    DHReachability *returnValue = [self reachabilityWithAddress:&localWifiAddress];
-    if (returnValue != NULL) {
-        returnValue->_alwaysReturnLocalWiFiStatus = YES;
-    }
-
-    return returnValue;
+    return [self reachabilityWithAddress:(const struct sockaddr *)&zeroAddress];
 }
 
 #pragma mark - Start and stop notifier
@@ -178,18 +162,6 @@ static void DHReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
 }
 
 #pragma mark - Network Flag Handling
-
-- (DHReachabilityStatus)localWiFiStatusForFlags:(SCNetworkReachabilityFlags)flags {
-    DHPrintReachabilityFlags(flags, "localWiFiStatusForFlags");
-    DHReachabilityStatus returnValue = DHReachabilityStatusNotReachable;
-
-    if ((flags & kSCNetworkReachabilityFlagsReachable) && (flags & kSCNetworkReachabilityFlagsIsDirect)) {
-        returnValue = DHReachabilityStatusWiFi;
-    }
-
-    return returnValue;
-}
-
 - (DHReachabilityStatus)networkStatusForFlags:(SCNetworkReachabilityFlags)flags {
     DHPrintReachabilityFlags(flags, "networkStatusForFlags");
     if ((flags & kSCNetworkReachabilityFlagsReachable) == 0) {
@@ -247,11 +219,7 @@ static void DHReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
     SCNetworkReachabilityFlags flags;
 
     if (SCNetworkReachabilityGetFlags(_reachabilityRef, &flags)) {
-        if (_alwaysReturnLocalWiFiStatus) {
-            returnValue = [self localWiFiStatusForFlags:flags];
-        } else {
-            returnValue = [self networkStatusForFlags:flags];
-        }
+        returnValue = [self networkStatusForFlags:flags];
     }
 
     return returnValue;
