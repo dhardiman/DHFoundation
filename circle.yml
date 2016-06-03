@@ -13,4 +13,4 @@ test:
       tee $CIRCLE_ARTIFACTS/xcodebuild.log |
       xcpretty --report html --output $CIRCLE_TEST_REPORTS/results.html --report junit --output $CIRCLE_TEST_REPORTS/results.xml
   post:
-    - COVERAGE_DIR=`xcodebuild -scheme "DHFoundation" -showBuildSettings | perl -lne 'print $1 if /OBJROOT\s=\s(.*)/'`; bundle exec slather coverage --build-directory $COVERAGE_DIR/CodeCoverage/DHFoundation
+    - bundle exec slather
