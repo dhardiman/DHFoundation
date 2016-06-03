@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Category which adds various date utility functions; heavily inspired by Rails.
  @see http://api.rubyonrails.org/
@@ -53,7 +55,9 @@
  @param input String to parse
  @param formatter Formatter to use
  */
-+ (NSDate *)dateFromString:(NSString *)input
-             withFormatter:(NSDateFormatter *)formatter;
++ (nullable NSDate *)dateFromString:(NSString *)input
+                      withFormatter:(NSDateFormatter *)formatter;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -7,6 +7,8 @@
 //
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Useful custom date formatters
  */
@@ -37,3 +39,5 @@
 + (NSDateFormatter *)dateFormatterForFormat:(NSString *)format locale:(NSLocale *)locale cache:(BOOL)shouldCache;
 
 @end
+
+NS_ASSUME_NONNULL_END

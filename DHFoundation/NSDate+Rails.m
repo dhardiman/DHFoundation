@@ -25,9 +25,6 @@
 }
 
 - (BOOL)isAfter:(NSDate *)other {
-    if (other == nil) {
-        return YES; //A real date must be after a nil date
-    }
     return [self compare:other] == NSOrderedDescending;
 }
 
@@ -60,9 +57,6 @@
 }
 
 + (NSDate *)dateFromString:(NSString *)input withFormatter:(NSDateFormatter *)formatter {
-    if (!formatter) {
-        return nil;
-    }
     NSDate *result = [formatter dateFromString:input];
     if (!result) {
         NSError *error = nil;
