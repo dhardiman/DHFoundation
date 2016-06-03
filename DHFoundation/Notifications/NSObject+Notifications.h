@@ -30,6 +30,8 @@
 #import <Foundation/Foundation.h>
 #import "DHNotificationStore.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *  Convenience category to make it easy to use `NSNotificationCenter`'s
  *  block methods
@@ -42,3 +44,5 @@
 @property (atomic, strong, readonly) DHNotificationStore *dh_notificationStore;
 
 @end
+
+NS_ASSUME_NONNULL_END

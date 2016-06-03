@@ -29,6 +29,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *  A block that will be executed when a notification is received
  *
@@ -65,7 +67,7 @@ typedef void (^DHNotificationStoreBlock)(NSNotification *note);
  @param block the callback block to use
  @return the notification
  */
-- (id)addObserverForName:(NSString *)name object:(id)obj usingBlock:(DHNotificationStoreBlock)block;
+- (id)addObserverForName:(NSString *)name object:(id _Nullable)obj usingBlock:(DHNotificationStoreBlock)block;
 
 /**
  Add an observer for events with the specified names, on the posting queue with
@@ -84,7 +86,7 @@ typedef void (^DHNotificationStoreBlock)(NSNotification *note);
  @param block the callback block to use
  @return the notification
  */
-- (id)addObserverForName:(NSString *)name queue:(NSOperationQueue *)queue usingBlock:(DHNotificationStoreBlock)block;
+- (id)addObserverForName:(NSString *)name queue:(NSOperationQueue *_Nullable)queue usingBlock:(DHNotificationStoreBlock)block;
 
 /**
  Add an observer for events with the specified names, on the specified queue with
@@ -94,7 +96,7 @@ typedef void (^DHNotificationStoreBlock)(NSNotification *note);
  @param block the callback block to use
  @return the notifications
  */
-- (NSArray *)addObserversForNames:(NSArray *)names queue:(NSOperationQueue *)queue usingBlock:(DHNotificationStoreBlock)block;
+- (NSArray *)addObserversForNames:(NSArray *)names queue:(NSOperationQueue *_Nullable)queue usingBlock:(DHNotificationStoreBlock)block;
 
 /**
  Add a notification
@@ -104,7 +106,7 @@ typedef void (^DHNotificationStoreBlock)(NSNotification *note);
  @param block the callback block to use
  @return the notification
  */
-- (id)addObserverForName:(NSString *)name object:(id)obj queue:(NSOperationQueue *)queue usingBlock:(DHNotificationStoreBlock)block;
+- (id)addObserverForName:(NSString *)name object:(id _Nullable)obj queue:(NSOperationQueue *_Nullable)queue usingBlock:(DHNotificationStoreBlock)block;
 
 /**
  Add an observer for events with the specified names, on the specified queue with
@@ -115,7 +117,7 @@ typedef void (^DHNotificationStoreBlock)(NSNotification *note);
  @param block the callback block to use
  @return the notifications
  */
-- (NSArray *)addObserversForNames:(NSArray *)names object:(id)obj queue:(NSOperationQueue *)queue usingBlock:(DHNotificationStoreBlock)block;
+- (NSArray *)addObserversForNames:(NSArray *)names object:(id _Nullable)obj queue:(NSOperationQueue *_Nullable)queue usingBlock:(DHNotificationStoreBlock)block;
 
 /**
  Allow access to the underlying notification observer dictionary.
@@ -143,3 +145,5 @@ typedef void (^DHNotificationStoreBlock)(NSNotification *note);
 - (void)removeAllObservers;
 
 @end
+
+NS_ASSUME_NONNULL_END
