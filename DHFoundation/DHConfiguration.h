@@ -7,6 +7,8 @@
 //
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Base class for retrieving properties from a config file.
  Supports properties of types supported by plist (NSNumber, NSString, NSDictionary, NSArray),
@@ -32,7 +34,7 @@
  and if not found will capitalise the first letter of
  the property and add this prefix and try again.
  */
-@property (nonatomic, copy) NSString *propertyPrefix;
+@property (nonatomic, copy, nullable) NSString *propertyPrefix;
 
 /**
  *  The bundle to load the configuration from. Defaults to `mainBundle`
@@ -77,3 +79,5 @@ id dh_objectGetter(DHConfiguration *self, SEL _cmd);
 + (BOOL)canResolveInstanceMethod:(SEL)sel forType:(const char *)type;
 
 @end
+
+NS_ASSUME_NONNULL_END

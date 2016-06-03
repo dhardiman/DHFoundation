@@ -18,7 +18,6 @@
 - (void)testDatesCanBeAfterOtherDates {
     NSDate *firstDate = NSDate.date;
     NSDate *secondDate = [firstDate dateByAddingTimeInterval:1];
-    expect([firstDate isAfter:nil]).to.beTruthy();
     expect([firstDate isAfter:secondDate]).to.beFalsy();
     expect([secondDate isAfter:firstDate]).to.beTruthy();
 }
@@ -26,7 +25,6 @@
 - (void)testDatesCanBeBeforeOtherDates {
     NSDate *firstDate = NSDate.date;
     NSDate *secondDate = [firstDate dateByAddingTimeInterval:1];
-    expect([firstDate isBefore:nil]).to.beFalsy();
     expect([firstDate isBefore:secondDate]).to.beTruthy();
     expect([secondDate isBefore:firstDate]).to.beFalsy();
 }
@@ -51,9 +49,7 @@
     NSString *dateString = @"2015-08-04";
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy-MM-dd";
-    NSDate *date = [NSDate dateFromString:dateString withFormatter:nil];
-    expect(date).to.beNil();
-    date = [NSDate dateFromString:@"nonsense" withFormatter:formatter];
+    NSDate *date = [NSDate dateFromString:@"nonsense" withFormatter:formatter];
     expect(date).to.beNil();
     date = [NSDate dateFromString:dateString withFormatter:formatter];
     NSDateComponents *components = date.gregorianCalendarComponents;

@@ -7,22 +7,29 @@
 //
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Adds subscripting support to NSCache
  */
-@interface NSCache (Subscripting)
+// clang-format off
+@interface NSCache<KeyType, ObjectType> (Subscripting)
 
 /**
  Return a value for the subscript key
  @param key The key to look for
  */
-- (id)objectForKeyedSubscript:(id)key;
+- (nullable ObjectType)objectForKeyedSubscript:(KeyType)key;
 
 /**
  Set a value for the subscript key
  @param obj The object to store
  @param key The key to store against
  */
-- (void)setObject:(id)obj forKeyedSubscript:(id)key;
+- (void)setObject:(ObjectType)obj forKeyedSubscript:(KeyType)key;
 
 @end
+
+// clang-format on
+
+NS_ASSUME_NONNULL_END
