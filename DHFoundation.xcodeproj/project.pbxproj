@@ -94,7 +94,7 @@
 		45E7C6EC1B70E5390008B2A7 /* DHDateExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E7C6EB1B70E5390008B2A7 /* DHDateExtensionTests.m */; };
 		48D165D41D0344F2002EDE11 /* DHFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D165D31D0344F2002EDE11 /* DHFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48D165D91D03505D002EDE11 /* DHConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 45DE09601A1A5771008EC57A /* DHConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		48D165DA1D035069002EDE11 /* NSCache+Subscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 07316492179681DA00930FCE /* NSCache+Subscripting.h */; };
+		48D165DA1D035069002EDE11 /* NSCache+Subscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 07316492179681DA00930FCE /* NSCache+Subscripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48D165DB1D03506B002EDE11 /* NSCache+Subscripting.m in Sources */ = {isa = PBXBuildFile; fileRef = 07316493179681DA00930FCE /* NSCache+Subscripting.m */; };
 		48D165DC1D035070002EDE11 /* NSDate+Rails.h in Headers */ = {isa = PBXBuildFile; fileRef = 0731646A17955B9500930FCE /* NSDate+Rails.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48D165DD1D035075002EDE11 /* NSDate+Rails.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731646B17955B9500930FCE /* NSDate+Rails.m */; };
