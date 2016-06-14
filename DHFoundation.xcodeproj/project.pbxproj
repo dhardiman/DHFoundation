@@ -92,6 +92,52 @@
 		45E7C6E81B70B8EA0008B2A7 /* DHJSONTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E7C6E71B70B8EA0008B2A7 /* DHJSONTests.m */; };
 		45E7C6EA1B70BA270008B2A7 /* DHDynamicCastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E7C6E91B70BA270008B2A7 /* DHDynamicCastTests.m */; };
 		45E7C6EC1B70E5390008B2A7 /* DHDateExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E7C6EB1B70E5390008B2A7 /* DHDateExtensionTests.m */; };
+		484D26131D0D73E2007BB861 /* DHFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 484D26121D0D73E2007BB861 /* DHFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		484D26181D0D7467007BB861 /* UIViewController+DHPrepareSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 450A4B971A36EC64001D9577 /* UIViewController+DHPrepareSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		484D26191D0D746F007BB861 /* UIViewController+DHPrepareSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A4B981A36EC64001D9577 /* UIViewController+DHPrepareSegue.m */; };
+		484D261A1D0D747E007BB861 /* DHConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 45DE09601A1A5771008EC57A /* DHConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		484D261B1D0D7486007BB861 /* DHConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DE09611A1A5771008EC57A /* DHConfiguration.m */; };
+		484D261C1D0D748B007BB861 /* DHConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DE09611A1A5771008EC57A /* DHConfiguration.m */; };
+		484D261D1D0D7494007BB861 /* DHReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B8516817A25A470057D482 /* DHReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		484D261E1D0D7497007BB861 /* DHReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B8516917A25A470057D482 /* DHReachability.m */; };
+		484D261F1D0D7499007BB861 /* DHReachabilityEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B8516E17A260300057D482 /* DHReachabilityEventHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		484D26201D0D749C007BB861 /* DHReachabilityEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B8516F17A260300057D482 /* DHReachabilityEventHandler.m */; };
+		484D26211D0D773F007BB861 /* NSCache+Subscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 07316492179681DA00930FCE /* NSCache+Subscripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		484D26221D0D7742007BB861 /* NSCache+Subscripting.m in Sources */ = {isa = PBXBuildFile; fileRef = 07316493179681DA00930FCE /* NSCache+Subscripting.m */; };
+		484D26231D0D7746007BB861 /* NSDate+Rails.h in Headers */ = {isa = PBXBuildFile; fileRef = 0731646A17955B9500930FCE /* NSDate+Rails.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		484D26241D0D7749007BB861 /* NSDate+Rails.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731646B17955B9500930FCE /* NSDate+Rails.m */; };
+		484D26251D0D774C007BB861 /* NSDateFormatter+Formatters.h in Headers */ = {isa = PBXBuildFile; fileRef = 0731648717967EB200930FCE /* NSDateFormatter+Formatters.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		484D26261D0D774F007BB861 /* NSDateFormatter+Formatters.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731648817967EB200930FCE /* NSDateFormatter+Formatters.m */; };
+		484D26271D0D7753007BB861 /* NSData+JSONDeserialise.h in Headers */ = {isa = PBXBuildFile; fileRef = 0731646117955A0900930FCE /* NSData+JSONDeserialise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		484D26281D0D7756007BB861 /* NSData+JSONDeserialise.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731646217955A0900930FCE /* NSData+JSONDeserialise.m */; };
+		484D26291D0D7758007BB861 /* NSObject+JSONSerialise.h in Headers */ = {isa = PBXBuildFile; fileRef = 0731646317955A0900930FCE /* NSObject+JSONSerialise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		484D262A1D0D775B007BB861 /* NSObject+JSONSerialise.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731646417955A0900930FCE /* NSObject+JSONSerialise.m */; };
+		484D262B1D0D775F007BB861 /* NSObject+Cast.h in Headers */ = {isa = PBXBuildFile; fileRef = 0731645C179559CE00930FCE /* NSObject+Cast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		484D262C1D0D7762007BB861 /* NSObject+Cast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731645D179559CE00930FCE /* NSObject+Cast.m */; };
+		484D262D1D0D7767007BB861 /* DHWeakSelf.h in Headers */ = {isa = PBXBuildFile; fileRef = 07316459179558F800930FCE /* DHWeakSelf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		484D262E1D0D776B007BB861 /* DHNotificationStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 076321D317940D0A00846D0D /* DHNotificationStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		484D262F1D0D776E007BB861 /* DHNotificationStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 076321D417940D0A00846D0D /* DHNotificationStore.m */; };
+		484D26301D0D7770007BB861 /* NSObject+Notifications.h in Headers */ = {isa = PBXBuildFile; fileRef = 076321D517940D0A00846D0D /* NSObject+Notifications.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		484D26311D0D7773007BB861 /* NSObject+Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 076321D617940D0A00846D0D /* NSObject+Notifications.m */; };
+		48D165D41D0344F2002EDE11 /* DHFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D165D31D0344F2002EDE11 /* DHFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48D165D91D03505D002EDE11 /* DHConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 45DE09601A1A5771008EC57A /* DHConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48D165DA1D035069002EDE11 /* NSCache+Subscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 07316492179681DA00930FCE /* NSCache+Subscripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48D165DB1D03506B002EDE11 /* NSCache+Subscripting.m in Sources */ = {isa = PBXBuildFile; fileRef = 07316493179681DA00930FCE /* NSCache+Subscripting.m */; };
+		48D165DC1D035070002EDE11 /* NSDate+Rails.h in Headers */ = {isa = PBXBuildFile; fileRef = 0731646A17955B9500930FCE /* NSDate+Rails.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48D165DD1D035075002EDE11 /* NSDate+Rails.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731646B17955B9500930FCE /* NSDate+Rails.m */; };
+		48D165DE1D035079002EDE11 /* NSDateFormatter+Formatters.h in Headers */ = {isa = PBXBuildFile; fileRef = 0731648717967EB200930FCE /* NSDateFormatter+Formatters.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48D165DF1D03507D002EDE11 /* NSDateFormatter+Formatters.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731648817967EB200930FCE /* NSDateFormatter+Formatters.m */; };
+		48D165E01D0350A1002EDE11 /* NSData+JSONDeserialise.h in Headers */ = {isa = PBXBuildFile; fileRef = 0731646117955A0900930FCE /* NSData+JSONDeserialise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48D165E11D0350A4002EDE11 /* NSData+JSONDeserialise.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731646217955A0900930FCE /* NSData+JSONDeserialise.m */; };
+		48D165E21D0350A6002EDE11 /* NSObject+JSONSerialise.h in Headers */ = {isa = PBXBuildFile; fileRef = 0731646317955A0900930FCE /* NSObject+JSONSerialise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48D165E31D0350AE002EDE11 /* NSObject+JSONSerialise.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731646417955A0900930FCE /* NSObject+JSONSerialise.m */; };
+		48D165E41D0350B7002EDE11 /* NSObject+Cast.h in Headers */ = {isa = PBXBuildFile; fileRef = 0731645C179559CE00930FCE /* NSObject+Cast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48D165E51D0350BB002EDE11 /* NSObject+Cast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0731645D179559CE00930FCE /* NSObject+Cast.m */; };
+		48D165E61D0350C0002EDE11 /* DHWeakSelf.h in Headers */ = {isa = PBXBuildFile; fileRef = 07316459179558F800930FCE /* DHWeakSelf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48D165E71D0350C9002EDE11 /* DHNotificationStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 076321D317940D0A00846D0D /* DHNotificationStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48D165E81D0350CD002EDE11 /* DHNotificationStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 076321D417940D0A00846D0D /* DHNotificationStore.m */; };
+		48D165E91D0350CF002EDE11 /* NSObject+Notifications.h in Headers */ = {isa = PBXBuildFile; fileRef = 076321D517940D0A00846D0D /* NSObject+Notifications.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48D165EA1D0350D2002EDE11 /* NSObject+Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 076321D617940D0A00846D0D /* NSObject+Notifications.m */; };
 		96B8516D17A25B0A0057D482 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B8516C17A25B0A0057D482 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
@@ -186,6 +232,12 @@
 		45E7C6E71B70B8EA0008B2A7 /* DHJSONTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHJSONTests.m; sourceTree = "<group>"; };
 		45E7C6E91B70BA270008B2A7 /* DHDynamicCastTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHDynamicCastTests.m; sourceTree = "<group>"; };
 		45E7C6EB1B70E5390008B2A7 /* DHDateExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHDateExtensionTests.m; sourceTree = "<group>"; };
+		484D26101D0D73E2007BB861 /* DHFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DHFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		484D26121D0D73E2007BB861 /* DHFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHFoundation.h; sourceTree = "<group>"; };
+		484D26141D0D73E2007BB861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48D165D11D0344F2002EDE11 /* DHFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DHFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48D165D31D0344F2002EDE11 /* DHFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHFoundation.h; sourceTree = "<group>"; };
+		48D165D51D0344F2002EDE11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96B8516817A25A470057D482 /* DHReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = DHReachability.h; path = Reachability/DHReachability.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		96B8516917A25A470057D482 /* DHReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DHReachability.m; path = Reachability/DHReachability.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		96B8516C17A25B0A0057D482 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -219,6 +271,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		454C845E1A485A5500DC63B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		484D260C1D0D73E2007BB861 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48D165CD1D0344F2002EDE11 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,6 +349,8 @@
 				076321A6179409CA00846D0D /* DHFoundationTests */,
 				076321C917940CD000846D0D /* DHFoundation */,
 				454C84631A485A5500DC63B5 /* DHFoundationFramework */,
+				48D165D21D0344F2002EDE11 /* DHFoundationFramework watchOS */,
+				484D26111D0D73E2007BB861 /* DHFoundationFramework tvOS */,
 				07632175179409CA00846D0D /* Frameworks */,
 				07632174179409CA00846D0D /* Products */,
 			);
@@ -294,6 +362,8 @@
 				07632173179409CA00846D0D /* DHFoundationTestBase.app */,
 				0763219F179409CA00846D0D /* DHFoundationTests.xctest */,
 				454C84621A485A5500DC63B5 /* DHFoundation.framework */,
+				48D165D11D0344F2002EDE11 /* DHFoundation.framework */,
+				484D26101D0D73E2007BB861 /* DHFoundation.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -463,6 +533,24 @@
 			name = Configuration;
 			sourceTree = "<group>";
 		};
+		484D26111D0D73E2007BB861 /* DHFoundationFramework tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				484D26121D0D73E2007BB861 /* DHFoundation.h */,
+				484D26141D0D73E2007BB861 /* Info.plist */,
+			);
+			path = "DHFoundationFramework tvOS";
+			sourceTree = "<group>";
+		};
+		48D165D21D0344F2002EDE11 /* DHFoundationFramework watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				48D165D31D0344F2002EDE11 /* DHFoundation.h */,
+				48D165D51D0344F2002EDE11 /* Info.plist */,
+			);
+			path = "DHFoundationFramework watchOS";
+			sourceTree = "<group>";
+		};
 		96B8516717A25A040057D482 /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +583,45 @@
 				454C848E1A485AB400DC63B5 /* NSDateFormatter+Formatters.h in Headers */,
 				454C84921A485B1900DC63B5 /* NSObject+JSONSerialise.h in Headers */,
 				454C84901A485ABC00DC63B5 /* NSData+JSONDeserialise.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		484D260D1D0D73E2007BB861 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				484D262D1D0D7767007BB861 /* DHWeakSelf.h in Headers */,
+				484D26231D0D7746007BB861 /* NSDate+Rails.h in Headers */,
+				484D26131D0D73E2007BB861 /* DHFoundation.h in Headers */,
+				484D261F1D0D7499007BB861 /* DHReachabilityEventHandler.h in Headers */,
+				484D26181D0D7467007BB861 /* UIViewController+DHPrepareSegue.h in Headers */,
+				484D26301D0D7770007BB861 /* NSObject+Notifications.h in Headers */,
+				484D261A1D0D747E007BB861 /* DHConfiguration.h in Headers */,
+				484D261D1D0D7494007BB861 /* DHReachability.h in Headers */,
+				484D26211D0D773F007BB861 /* NSCache+Subscripting.h in Headers */,
+				484D262E1D0D776B007BB861 /* DHNotificationStore.h in Headers */,
+				484D262B1D0D775F007BB861 /* NSObject+Cast.h in Headers */,
+				484D26251D0D774C007BB861 /* NSDateFormatter+Formatters.h in Headers */,
+				484D26291D0D7758007BB861 /* NSObject+JSONSerialise.h in Headers */,
+				484D26271D0D7753007BB861 /* NSData+JSONDeserialise.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48D165CE1D0344F2002EDE11 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48D165D41D0344F2002EDE11 /* DHFoundation.h in Headers */,
+				48D165E71D0350C9002EDE11 /* DHNotificationStore.h in Headers */,
+				48D165DC1D035070002EDE11 /* NSDate+Rails.h in Headers */,
+				48D165E01D0350A1002EDE11 /* NSData+JSONDeserialise.h in Headers */,
+				48D165E61D0350C0002EDE11 /* DHWeakSelf.h in Headers */,
+				48D165E41D0350B7002EDE11 /* NSObject+Cast.h in Headers */,
+				48D165D91D03505D002EDE11 /* DHConfiguration.h in Headers */,
+				48D165DE1D035079002EDE11 /* NSDateFormatter+Formatters.h in Headers */,
+				48D165E91D0350CF002EDE11 /* NSObject+Notifications.h in Headers */,
+				48D165E21D0350A6002EDE11 /* NSObject+JSONSerialise.h in Headers */,
+				48D165DA1D035069002EDE11 /* NSCache+Subscripting.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +683,42 @@
 			productReference = 454C84621A485A5500DC63B5 /* DHFoundation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		484D260F1D0D73E2007BB861 /* DHFoundationFramework tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 484D26171D0D73E2007BB861 /* Build configuration list for PBXNativeTarget "DHFoundationFramework tvOS" */;
+			buildPhases = (
+				484D260B1D0D73E2007BB861 /* Sources */,
+				484D260C1D0D73E2007BB861 /* Frameworks */,
+				484D260D1D0D73E2007BB861 /* Headers */,
+				484D260E1D0D73E2007BB861 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DHFoundationFramework tvOS";
+			productName = "DHFoundationFramework tvOS";
+			productReference = 484D26101D0D73E2007BB861 /* DHFoundation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		48D165D01D0344F2002EDE11 /* DHFoundationFramework watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48D165D81D0344F2002EDE11 /* Build configuration list for PBXNativeTarget "DHFoundationFramework watchOS" */;
+			buildPhases = (
+				48D165CC1D0344F2002EDE11 /* Sources */,
+				48D165CD1D0344F2002EDE11 /* Frameworks */,
+				48D165CE1D0344F2002EDE11 /* Headers */,
+				48D165CF1D0344F2002EDE11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DHFoundationFramework watchOS";
+			productName = "DHFoundationFramework watchOS";
+			productReference = 48D165D11D0344F2002EDE11 /* DHFoundation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -574,6 +737,12 @@
 					};
 					45E284051A8E3473007F5D85 = {
 						CreatedOnToolsVersion = 6.1.1;
+					};
+					484D260F1D0D73E2007BB861 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					48D165D01D0344F2002EDE11 = {
+						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
@@ -594,6 +763,8 @@
 				450A4B761A31B293001D9577 /* documentation */,
 				454C84611A485A5500DC63B5 /* DHFoundationFramework */,
 				45E284051A8E3473007F5D85 /* universaldynamicframework */,
+				48D165D01D0344F2002EDE11 /* DHFoundationFramework watchOS */,
+				484D260F1D0D73E2007BB861 /* DHFoundationFramework tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -626,6 +797,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		454C84601A485A5500DC63B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		484D260E1D0D73E2007BB861 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48D165CF1D0344F2002EDE11 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -706,6 +891,41 @@
 				454C848F1A485AB800DC63B5 /* NSDateFormatter+Formatters.m in Sources */,
 				454C84951A485B2600DC63B5 /* NSObject+Cast.m in Sources */,
 				454C84871A485A9200DC63B5 /* DHReachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		484D260B1D0D73E2007BB861 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				484D26311D0D7773007BB861 /* NSObject+Notifications.m in Sources */,
+				484D26241D0D7749007BB861 /* NSDate+Rails.m in Sources */,
+				484D26221D0D7742007BB861 /* NSCache+Subscripting.m in Sources */,
+				484D26201D0D749C007BB861 /* DHReachabilityEventHandler.m in Sources */,
+				484D262A1D0D775B007BB861 /* NSObject+JSONSerialise.m in Sources */,
+				484D261B1D0D7486007BB861 /* DHConfiguration.m in Sources */,
+				484D262F1D0D776E007BB861 /* DHNotificationStore.m in Sources */,
+				484D26191D0D746F007BB861 /* UIViewController+DHPrepareSegue.m in Sources */,
+				484D26281D0D7756007BB861 /* NSData+JSONDeserialise.m in Sources */,
+				484D26261D0D774F007BB861 /* NSDateFormatter+Formatters.m in Sources */,
+				484D262C1D0D7762007BB861 /* NSObject+Cast.m in Sources */,
+				484D261E1D0D7497007BB861 /* DHReachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48D165CC1D0344F2002EDE11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48D165EA1D0350D2002EDE11 /* NSObject+Notifications.m in Sources */,
+				48D165DF1D03507D002EDE11 /* NSDateFormatter+Formatters.m in Sources */,
+				48D165E81D0350CD002EDE11 /* DHNotificationStore.m in Sources */,
+				48D165E11D0350A4002EDE11 /* NSData+JSONDeserialise.m in Sources */,
+				48D165DD1D035075002EDE11 /* NSDate+Rails.m in Sources */,
+				484D261C1D0D748B007BB861 /* DHConfiguration.m in Sources */,
+				48D165E31D0350AE002EDE11 /* NSObject+JSONSerialise.m in Sources */,
+				48D165E51D0350BB002EDE11 /* NSObject+Cast.m in Sources */,
+				48D165DB1D03506B002EDE11 /* NSCache+Subscripting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,12 +1140,13 @@
 		454C847B1A485A5600DC63B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 1.3.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -959,12 +1180,13 @@
 		454C847C1A485A5600DC63B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 1.3.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1001,6 +1223,156 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		484D26151D0D73E2007BB861 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "DHFoundationFramework tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.davidhardiman.DHFoundationFramework-tvOS";
+				PRODUCT_NAME = DHFoundation;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		484D26161D0D73E2007BB861 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "DHFoundationFramework tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.davidhardiman.DHFoundationFramework-tvOS";
+				PRODUCT_NAME = DHFoundation;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		48D165D61D0344F2002EDE11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CURRENT_PROJECT_VERSION = 1.3.0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "DHFoundationFramework watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.davidhardiman.DHFoundationFramework-watchOS";
+				PRODUCT_NAME = DHFoundation;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		48D165D71D0344F2002EDE11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.3.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "DHFoundationFramework watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.davidhardiman.DHFoundationFramework-watchOS";
+				PRODUCT_NAME = DHFoundation;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
 		};
@@ -1057,6 +1429,23 @@
 			buildConfigurations = (
 				45E284061A8E3473007F5D85 /* Debug */,
 				45E284071A8E3473007F5D85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		484D26171D0D73E2007BB861 /* Build configuration list for PBXNativeTarget "DHFoundationFramework tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				484D26151D0D73E2007BB861 /* Debug */,
+				484D26161D0D73E2007BB861 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		48D165D81D0344F2002EDE11 /* Build configuration list for PBXNativeTarget "DHFoundationFramework watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48D165D61D0344F2002EDE11 /* Debug */,
+				48D165D71D0344F2002EDE11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
