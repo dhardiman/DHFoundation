@@ -13,6 +13,16 @@
 @interface UIViewController (DHPrepareSegue)
 
 /**
+ Takes a segue and decomposes the objects to pass to 
+ `dh_prepareSegueWithIdentifier:destinationViewController:sourceViewController:sender:`
+ 
+ @param segue   The segue being called
+ @param sender  Sender object. Requires one part of the selector name to be called sender:
+ */
+- (void)dh_prepareSegue:(UIStoryboardSegue *)segue
+                 sender:(id)sender;
+
+/**
  Takes a segue identifier and runs perform selector against it. If the identifier has no colons, no
  arguments are passed, if one, the destination view controller is passed, if two, then the destination
  and source view controller are passed. It is also possible to pass the sender if part of the selector

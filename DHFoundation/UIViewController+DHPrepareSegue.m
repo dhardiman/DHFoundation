@@ -5,10 +5,17 @@
 //  Copyright (c) 2014 David Hardiman. All rights reserved.
 //
 
-#import "UIViewController+DHPrepareSegue.h"
 #import <objc/message.h>
+#import "UIViewController+DHPrepareSegue.h"
 
 @implementation UIViewController (DHPrepareSegue)
+
+- (void)dh_prepareSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [self dh_prepareSegueWithIdentifier:segue.identifier
+              destinationViewController:segue.destinationViewController
+                   sourceViewController:segue.sourceViewController
+                                 sender:sender];
+}
 
 - (void)dh_prepareSegueWithIdentifier:(NSString *)segueIdentifier
             destinationViewController:(UIViewController *)destination
