@@ -53,9 +53,9 @@
 		076321E317940E0B00846D0D /* DHNotificationsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 076321E217940E0B00846D0D /* DHNotificationsTest.m */; };
 		07800DBD17AFDC8B00E6020B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B8516C17A25B0A0057D482 /* SystemConfiguration.framework */; };
 		0781FE0E1E93BDB8005A98FD /* DHReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 0781FE0C1E93BDB8005A98FD /* DHReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0781FE121E93BDDE005A98FD /* DHReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B8516817A25A470057D482 /* DHReachability.h */; };
+		0781FE121E93BDDE005A98FD /* DHReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B8516817A25A470057D482 /* DHReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0781FE131E93BDDE005A98FD /* DHReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B8516917A25A470057D482 /* DHReachability.m */; };
-		0781FE141E93BDDE005A98FD /* DHReachabilityEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B8516E17A260300057D482 /* DHReachabilityEventHandler.h */; };
+		0781FE141E93BDDE005A98FD /* DHReachabilityEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B8516E17A260300057D482 /* DHReachabilityEventHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0781FE151E93BDDE005A98FD /* DHReachabilityEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B8516F17A260300057D482 /* DHReachabilityEventHandler.m */; };
 		07C9CC3817B0F78E00802E74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC3717B0F78E00802E74 /* Images.xcassets */; };
 		450A4B961A36EC5D001D9577 /* DHPrepareForSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A4B951A36EC5D001D9577 /* DHPrepareForSegueTests.m */; };
