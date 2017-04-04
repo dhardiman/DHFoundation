@@ -52,7 +52,7 @@
 		076321C217940C6200846D0D /* DHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 076321C117940C6200846D0D /* DHAppDelegate.m */; };
 		076321E317940E0B00846D0D /* DHNotificationsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 076321E217940E0B00846D0D /* DHNotificationsTest.m */; };
 		07800DBD17AFDC8B00E6020B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B8516C17A25B0A0057D482 /* SystemConfiguration.framework */; };
-		0781FE0E1E93BDB8005A98FD /* DHReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 0781FE0C1E93BDB8005A98FD /* DHReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0781FE0E1E93BDB8005A98FD /* DHReachabilityFwk.h in Headers */ = {isa = PBXBuildFile; fileRef = 0781FE0C1E93BDB8005A98FD /* DHReachabilityFwk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0781FE121E93BDDE005A98FD /* DHReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B8516817A25A470057D482 /* DHReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0781FE131E93BDDE005A98FD /* DHReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B8516917A25A470057D482 /* DHReachability.m */; };
 		0781FE141E93BDDE005A98FD /* DHReachabilityEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B8516E17A260300057D482 /* DHReachabilityEventHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -222,7 +222,7 @@
 		076321D617940D0A00846D0D /* NSObject+Notifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSObject+Notifications.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		076321E217940E0B00846D0D /* DHNotificationsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DHNotificationsTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0781FE0A1E93BDB8005A98FD /* DHReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DHReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0781FE0C1E93BDB8005A98FD /* DHReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHReachability.h; sourceTree = "<group>"; };
+		0781FE0C1E93BDB8005A98FD /* DHReachabilityFwk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHReachabilityFwk.h; sourceTree = "<group>"; };
 		0781FE0D1E93BDB8005A98FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07C9CC3717B0F78E00802E74 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		450A4B951A36EC5D001D9577 /* DHPrepareForSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPrepareForSegueTests.m; sourceTree = "<group>"; };
@@ -518,7 +518,7 @@
 		0781FE0B1E93BDB8005A98FD /* DHReachability */ = {
 			isa = PBXGroup;
 			children = (
-				0781FE0C1E93BDB8005A98FD /* DHReachability.h */,
+				0781FE0C1E93BDB8005A98FD /* DHReachabilityFwk.h */,
 				0781FE0D1E93BDB8005A98FD /* Info.plist */,
 			);
 			path = DHReachability;
@@ -596,7 +596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0781FE141E93BDDE005A98FD /* DHReachabilityEventHandler.h in Headers */,
-				0781FE0E1E93BDB8005A98FD /* DHReachability.h in Headers */,
+				0781FE0E1E93BDB8005A98FD /* DHReachabilityFwk.h in Headers */,
 				0781FE121E93BDDE005A98FD /* DHReachability.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1227,6 +1227,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = DHReachability/module.modulemap;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.DHReachability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1268,6 +1269,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = DHReachability/module.modulemap;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.DHReachability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
