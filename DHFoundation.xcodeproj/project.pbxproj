@@ -52,6 +52,11 @@
 		076321C217940C6200846D0D /* DHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 076321C117940C6200846D0D /* DHAppDelegate.m */; };
 		076321E317940E0B00846D0D /* DHNotificationsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 076321E217940E0B00846D0D /* DHNotificationsTest.m */; };
 		07800DBD17AFDC8B00E6020B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B8516C17A25B0A0057D482 /* SystemConfiguration.framework */; };
+		0781FE0E1E93BDB8005A98FD /* DHReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 0781FE0C1E93BDB8005A98FD /* DHReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0781FE121E93BDDE005A98FD /* DHReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B8516817A25A470057D482 /* DHReachability.h */; };
+		0781FE131E93BDDE005A98FD /* DHReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B8516917A25A470057D482 /* DHReachability.m */; };
+		0781FE141E93BDDE005A98FD /* DHReachabilityEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B8516E17A260300057D482 /* DHReachabilityEventHandler.h */; };
+		0781FE151E93BDDE005A98FD /* DHReachabilityEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B8516F17A260300057D482 /* DHReachabilityEventHandler.m */; };
 		07C9CC3817B0F78E00802E74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC3717B0F78E00802E74 /* Images.xcassets */; };
 		450A4B961A36EC5D001D9577 /* DHPrepareForSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A4B951A36EC5D001D9577 /* DHPrepareForSegueTests.m */; };
 		454C84671A485A5500DC63B5 /* DHFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 454C84661A485A5500DC63B5 /* DHFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -216,6 +221,9 @@
 		076321D517940D0A00846D0D /* NSObject+Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSObject+Notifications.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		076321D617940D0A00846D0D /* NSObject+Notifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSObject+Notifications.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		076321E217940E0B00846D0D /* DHNotificationsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DHNotificationsTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		0781FE0A1E93BDB8005A98FD /* DHReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DHReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0781FE0C1E93BDB8005A98FD /* DHReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHReachability.h; sourceTree = "<group>"; };
+		0781FE0D1E93BDB8005A98FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07C9CC3717B0F78E00802E74 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		450A4B951A36EC5D001D9577 /* DHPrepareForSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPrepareForSegueTests.m; sourceTree = "<group>"; };
 		450A4B971A36EC64001D9577 /* UIViewController+DHPrepareSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DHPrepareSegue.h"; sourceTree = "<group>"; };
@@ -267,6 +275,13 @@
 				07800DBD17AFDC8B00E6020B /* SystemConfiguration.framework in Frameworks */,
 				076321A3179409CA00846D0D /* Foundation.framework in Frameworks */,
 				07316440179530CA00930FCE /* MIQTestingFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0781FE061E93BDB8005A98FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +366,7 @@
 				454C84631A485A5500DC63B5 /* DHFoundationFramework */,
 				48D165D21D0344F2002EDE11 /* DHFoundationFramework watchOS */,
 				484D26111D0D73E2007BB861 /* DHFoundationFramework tvOS */,
+				0781FE0B1E93BDB8005A98FD /* DHReachability */,
 				07632175179409CA00846D0D /* Frameworks */,
 				07632174179409CA00846D0D /* Products */,
 			);
@@ -364,6 +380,7 @@
 				454C84621A485A5500DC63B5 /* DHFoundation.framework */,
 				48D165D11D0344F2002EDE11 /* DHFoundation.framework */,
 				484D26101D0D73E2007BB861 /* DHFoundation.framework */,
+				0781FE0A1E93BDB8005A98FD /* DHReachability.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -498,6 +515,15 @@
 			path = Notifications;
 			sourceTree = "<group>";
 		};
+		0781FE0B1E93BDB8005A98FD /* DHReachability */ = {
+			isa = PBXGroup;
+			children = (
+				0781FE0C1E93BDB8005A98FD /* DHReachability.h */,
+				0781FE0D1E93BDB8005A98FD /* Info.plist */,
+			);
+			path = DHReachability;
+			sourceTree = "<group>";
+		};
 		450A4B8E1A36EABC001D9577 /* Perform Selector */ = {
 			isa = PBXGroup;
 			children = (
@@ -565,6 +591,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0781FE071E93BDB8005A98FD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0781FE141E93BDDE005A98FD /* DHReachabilityEventHandler.h in Headers */,
+				0781FE0E1E93BDB8005A98FD /* DHReachability.h in Headers */,
+				0781FE121E93BDDE005A98FD /* DHReachability.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		454C845F1A485A5500DC63B5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -665,6 +701,24 @@
 			productReference = 0763219F179409CA00846D0D /* DHFoundationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		0781FE091E93BDB8005A98FD /* DHReachability */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0781FE111E93BDB8005A98FD /* Build configuration list for PBXNativeTarget "DHReachability" */;
+			buildPhases = (
+				0781FE051E93BDB8005A98FD /* Sources */,
+				0781FE061E93BDB8005A98FD /* Frameworks */,
+				0781FE071E93BDB8005A98FD /* Headers */,
+				0781FE081E93BDB8005A98FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DHReachability;
+			productName = DHReachability;
+			productReference = 0781FE0A1E93BDB8005A98FD /* DHReachability.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		454C84611A485A5500DC63B5 /* DHFoundationFramework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 454C847F1A485A5600DC63B5 /* Build configuration list for PBXNativeTarget "DHFoundationFramework" */;
@@ -729,6 +783,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
+					0781FE091E93BDB8005A98FD = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					450A4B761A31B293001D9577 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -765,6 +823,7 @@
 				45E284051A8E3473007F5D85 /* universaldynamicframework */,
 				48D165D01D0344F2002EDE11 /* DHFoundationFramework watchOS */,
 				484D260F1D0D73E2007BB861 /* DHFoundationFramework tvOS */,
+				0781FE091E93BDB8005A98FD /* DHReachability */,
 			);
 		};
 /* End PBXProject section */
@@ -793,6 +852,13 @@
 				45DCB9741C64ECE40008B7D1 /* Config.plist in Resources */,
 				45DCB9751C64ECE40008B7D1 /* TestConfig.plist in Resources */,
 				076321AB179409CA00846D0D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0781FE081E93BDB8005A98FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,6 +938,15 @@
 				076321E317940E0B00846D0D /* DHNotificationsTest.m in Sources */,
 				0731648C17967ECC00930FCE /* DHDateFormatterTests.m in Sources */,
 				45E7C6EC1B70E5390008B2A7 /* DHDateExtensionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0781FE051E93BDB8005A98FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0781FE151E93BDDE005A98FD /* DHReachabilityEventHandler.m in Sources */,
+				0781FE131E93BDDE005A98FD /* DHReachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1120,6 +1195,86 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mobileiq.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = DHFoundationTests;
 				TEST_HOST = "";
+			};
+			name = Release;
+		};
+		0781FE0F1E93BDB8005A98FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = DHReachability/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.DHReachability;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0781FE101E93BDB8005A98FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = DHReachability/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.DHReachability;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1406,6 +1561,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		0781FE111E93BDB8005A98FD /* Build configuration list for PBXNativeTarget "DHReachability" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0781FE0F1E93BDB8005A98FD /* Debug */,
+				0781FE101E93BDB8005A98FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		450A4B791A31B293001D9577 /* Build configuration list for PBXAggregateTarget "documentation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1440,6 +1603,7 @@
 				484D26161D0D73E2007BB861 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48D165D81D0344F2002EDE11 /* Build configuration list for PBXNativeTarget "DHFoundationFramework watchOS" */ = {
 			isa = XCConfigurationList;
