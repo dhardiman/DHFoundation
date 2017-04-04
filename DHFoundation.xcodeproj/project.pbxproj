@@ -57,6 +57,10 @@
 		0781FE131E93BDDE005A98FD /* DHReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B8516917A25A470057D482 /* DHReachability.m */; };
 		0781FE141E93BDDE005A98FD /* DHReachabilityEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B8516E17A260300057D482 /* DHReachabilityEventHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0781FE151E93BDDE005A98FD /* DHReachabilityEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B8516F17A260300057D482 /* DHReachabilityEventHandler.m */; };
+		0781FE1D1E93DC04005A98FD /* DHNotificationStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 076321D317940D0A00846D0D /* DHNotificationStore.h */; };
+		0781FE1E1E93DC04005A98FD /* DHNotificationStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 076321D417940D0A00846D0D /* DHNotificationStore.m */; };
+		0781FE1F1E93DC04005A98FD /* NSObject+Notifications.h in Headers */ = {isa = PBXBuildFile; fileRef = 076321D517940D0A00846D0D /* NSObject+Notifications.h */; };
+		0781FE201E93DC04005A98FD /* NSObject+Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 076321D617940D0A00846D0D /* NSObject+Notifications.m */; };
 		07C9CC3817B0F78E00802E74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC3717B0F78E00802E74 /* Images.xcassets */; };
 		450A4B961A36EC5D001D9577 /* DHPrepareForSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A4B951A36EC5D001D9577 /* DHPrepareForSegueTests.m */; };
 		454C84671A485A5500DC63B5 /* DHFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 454C84661A485A5500DC63B5 /* DHFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -598,6 +602,8 @@
 				0781FE141E93BDDE005A98FD /* DHReachabilityEventHandler.h in Headers */,
 				0781FE0E1E93BDB8005A98FD /* DHReachabilityFwk.h in Headers */,
 				0781FE121E93BDDE005A98FD /* DHReachability.h in Headers */,
+				0781FE1F1E93DC04005A98FD /* NSObject+Notifications.h in Headers */,
+				0781FE1D1E93DC04005A98FD /* DHNotificationStore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,8 +951,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0781FE201E93DC04005A98FD /* NSObject+Notifications.m in Sources */,
 				0781FE151E93BDDE005A98FD /* DHReachabilityEventHandler.m in Sources */,
 				0781FE131E93BDDE005A98FD /* DHReachability.m in Sources */,
+				0781FE1E1E93DC04005A98FD /* DHNotificationStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
