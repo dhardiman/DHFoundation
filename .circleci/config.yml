@@ -1,0 +1,28 @@
+version: 2
+jobs:
+  iOStest:
+    macos:
+      xcode: "10.2.0"
+    steps:
+      - checkout
+      - run: bundle install
+      - run:
+          name: Run Tests
+          command: |
+          xcodebuild -destination 'platform=iOS Simulator,name=iPhone 6,OS=latest' -sdk iphonesimulator -scheme "DHFoundation" clean test |
+          tee $CIRCLE_ARTIFACTS/xcodebuild.log |
+          xcpretty --report html --output $CIRCLE_TEST_REPORTS/results.html --report junit --output $CIRCLE_TEST_REPORTS/results.xml
+      - run:
+          name: Post Coverage
+          command: bundle exec slather
+      - store_test_results:
+          path: test_output/results.xml
+      - store_artifacts:
+          path: test_output/results.html
+      - store_artifacts:
+          path: xcodebuild.log
+workflows:
+  version: 2
+  run-tests:
+    jobs:
+      - iOStest          
