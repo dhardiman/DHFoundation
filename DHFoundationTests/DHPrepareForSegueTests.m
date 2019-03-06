@@ -64,7 +64,7 @@ Test(AViewControllerRespondsToASegueWithTwoColons) {
 }
 
 Test(AViewControllerDoesntRespondToThreeColonsIfNoSenderRequested) {
-    expect(^{ [_testViewController dh_prepareSegueWithIdentifier:@"testDestination:source:anyobject:" destinationViewController:nil sourceViewController:nil sender:nil]; }).to.raise(NSInvalidArgumentException);
+    expect(^{ [self->_testViewController dh_prepareSegueWithIdentifier:@"testDestination:source:anyobject:" destinationViewController:nil sourceViewController:nil sender:nil]; }).to.raise(NSInvalidArgumentException);
 }
 
 Test(TheSenderIsPassedForOneColonIfRequested) {
@@ -98,7 +98,7 @@ Test(TheSenderIsPassedForThreeColonsIfRequested) {
 }
 
 Test(AViewControllerDoesntRespondToFourColons) {
-    expect(^{ [_testViewController dh_prepareSegueWithIdentifier:@"testDestination:source:sender:anyobject:" destinationViewController:nil sourceViewController:nil sender:nil]; }).to.raise(NSInvalidArgumentException);
+    expect(^{ [self->_testViewController dh_prepareSegueWithIdentifier:@"testDestination:source:sender:anyobject:" destinationViewController:nil sourceViewController:nil sender:nil]; }).to.raise(NSInvalidArgumentException);
 }
 
 END_TEST_CASE

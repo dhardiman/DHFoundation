@@ -65,7 +65,7 @@ typedef NS_ENUM(NSUInteger, DHReachabilityStatus) {
      *  Reachable via WWAN
      */
     DHReachabilityStatusWWAN
-};
+} __attribute__((enum_extensibility(closed)));
 
 extern NSString *const DHReachabilityChangedNotification;
 

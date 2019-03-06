@@ -42,8 +42,6 @@
 		07632189179409CA00846D0D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 07632188179409CA00846D0D /* Default.png */; };
 		0763218B179409CA00846D0D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0763218A179409CA00846D0D /* Default@2x.png */; };
 		0763218D179409CA00846D0D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0763218C179409CA00846D0D /* Default-568h@2x.png */; };
-		07632196179409CA00846D0D /* DHMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07632194179409CA00846D0D /* DHMasterViewController.xib */; };
-		07632199179409CA00846D0D /* DHDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07632197179409CA00846D0D /* DHDetailViewController.xib */; };
 		076321A2179409CA00846D0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07632176179409CA00846D0D /* UIKit.framework */; };
 		076321A3179409CA00846D0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07632178179409CA00846D0D /* Foundation.framework */; };
 		076321AB179409CA00846D0D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 076321A9179409CA00846D0D /* InfoPlist.strings */; };
@@ -61,6 +59,8 @@
 		0781FE1E1E93DC04005A98FD /* DHNotificationStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 076321D417940D0A00846D0D /* DHNotificationStore.m */; };
 		0781FE1F1E93DC04005A98FD /* NSObject+Notifications.h in Headers */ = {isa = PBXBuildFile; fileRef = 076321D517940D0A00846D0D /* NSObject+Notifications.h */; };
 		0781FE201E93DC04005A98FD /* NSObject+Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 076321D617940D0A00846D0D /* NSObject+Notifications.m */; };
+		07A0193E223004BB000C4132 /* DHMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07632194179409CA00846D0D /* DHMasterViewController.xib */; };
+		07A0193F223004BB000C4132 /* DHDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07632197179409CA00846D0D /* DHDetailViewController.xib */; };
 		07C9CC3817B0F78E00802E74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC3717B0F78E00802E74 /* Images.xcassets */; };
 		450A4B961A36EC5D001D9577 /* DHPrepareForSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 450A4B951A36EC5D001D9577 /* DHPrepareForSegueTests.m */; };
 		454C84671A485A5500DC63B5 /* DHFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 454C84661A485A5500DC63B5 /* DHFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -208,8 +208,6 @@
 		07632188179409CA00846D0D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0763218A179409CA00846D0D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0763218C179409CA00846D0D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		07632195179409CA00846D0D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DHMasterViewController.xib; sourceTree = "<group>"; };
-		07632198179409CA00846D0D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DHDetailViewController.xib; sourceTree = "<group>"; };
 		0763219F179409CA00846D0D /* DHFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DHFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		076321A8179409CA00846D0D /* DHFoundationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DHFoundationTests-Info.plist"; sourceTree = "<group>"; };
 		076321AA179409CA00846D0D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -228,6 +226,8 @@
 		0781FE0A1E93BDB8005A98FD /* DHReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DHReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0781FE0C1E93BDB8005A98FD /* DHReachabilityFwk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHReachabilityFwk.h; sourceTree = "<group>"; };
 		0781FE0D1E93BDB8005A98FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07A0193C2230047C000C4132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DHMasterViewController.xib; sourceTree = "<group>"; };
+		07A0193D2230047C000C4132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DHDetailViewController.xib; sourceTree = "<group>"; };
 		07C9CC3717B0F78E00802E74 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		450A4B951A36EC5D001D9577 /* DHPrepareForSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPrepareForSegueTests.m; sourceTree = "<group>"; };
 		450A4B971A36EC64001D9577 /* UIViewController+DHPrepareSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DHPrepareSegue.h"; sourceTree = "<group>"; };
@@ -786,7 +786,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DH;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					0781FE091E93BDB8005A98FD = {
@@ -816,6 +816,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 0763216A179409CA00846D0D;
 			productRefGroup = 07632174179409CA00846D0D /* Products */;
@@ -843,11 +844,11 @@
 				07632189179409CA00846D0D /* Default.png in Resources */,
 				07C9CC3817B0F78E00802E74 /* Images.xcassets in Resources */,
 				0763218B179409CA00846D0D /* Default@2x.png in Resources */,
+				07A0193E223004BB000C4132 /* DHMasterViewController.xib in Resources */,
+				07A0193F223004BB000C4132 /* DHDetailViewController.xib in Resources */,
 				45DE09661A1A57F1008EC57A /* Config.plist in Resources */,
 				0763218D179409CA00846D0D /* Default-568h@2x.png in Resources */,
-				07632196179409CA00846D0D /* DHMasterViewController.xib in Resources */,
 				45DE09671A1A57F1008EC57A /* TestConfig.plist in Resources */,
-				07632199179409CA00846D0D /* DHDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1039,7 +1040,7 @@
 		07632194179409CA00846D0D /* DHMasterViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				07632195179409CA00846D0D /* en */,
+				07A0193C2230047C000C4132 /* Base */,
 			);
 			name = DHMasterViewController.xib;
 			sourceTree = "<group>";
@@ -1047,7 +1048,7 @@
 		07632197179409CA00846D0D /* DHDetailViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				07632198179409CA00846D0D /* en */,
+				07A0193D2230047C000C4132 /* Base */,
 			);
 			name = DHDetailViewController.xib;
 			sourceTree = "<group>";
@@ -1071,26 +1072,43 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -1104,18 +1122,35 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1310,7 +1345,7 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1.3.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1350,7 +1385,7 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1.3.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1399,6 +1434,7 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1435,6 +1471,7 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1474,6 +1511,7 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1.3.0;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1511,6 +1549,7 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1.3.0;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1578,6 +1617,7 @@
 				0781FE101E93BDB8005A98FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		450A4B791A31B293001D9577 /* Build configuration list for PBXAggregateTarget "documentation" */ = {
 			isa = XCConfigurationList;
